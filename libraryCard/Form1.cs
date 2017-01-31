@@ -97,6 +97,11 @@ namespace libraryCard
         {
 
         }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
