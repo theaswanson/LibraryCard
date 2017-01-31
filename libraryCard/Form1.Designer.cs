@@ -53,10 +53,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(386, 263);
+            this.button1.Location = new System.Drawing.Point(290, 214);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 33);
+            this.button1.Size = new System.Drawing.Size(109, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add Customer";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,10 +64,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(386, 215);
+            this.button2.Location = new System.Drawing.Point(290, 174);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 33);
+            this.button2.Size = new System.Drawing.Size(109, 27);
             this.button2.TabIndex = 1;
             this.button2.Text = "Add Book";
             this.button2.UseVisualStyleBackColor = true;
@@ -81,8 +81,8 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(911, 26);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(683, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,21 +92,21 @@
             this.addBookToolStripMenuItem,
             this.addCustomerToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 22);
             this.fileToolStripMenuItem.Text = "Add";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
@@ -115,13 +115,13 @@
             this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem1});
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(108, 26);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             // 
             // label1
@@ -129,10 +129,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(207, 61);
+            this.label1.Location = new System.Drawing.Point(155, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(516, 95);
+            this.label1.Size = new System.Drawing.Size(410, 76);
             this.label1.TabIndex = 3;
             this.label1.Text = "Library Card";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -141,11 +141,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 21);
+            this.tabControl1.Location = new System.Drawing.Point(0, 17);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(913, 603);
+            this.tabControl1.Size = new System.Drawing.Size(685, 490);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -158,41 +158,41 @@
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(905, 574);
+            this.tabPage1.Size = new System.Drawing.Size(677, 464);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(369, 373);
+            this.button4.Location = new System.Drawing.Point(278, 347);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(182, 47);
+            this.button4.Size = new System.Drawing.Size(136, 38);
             this.button4.TabIndex = 6;
             this.button4.Text = "Check-In";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(369, 158);
+            this.button5.Location = new System.Drawing.Point(278, 305);
             this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(182, 47);
+            this.button5.Size = new System.Drawing.Size(136, 38);
             this.button5.TabIndex = 5;
             this.button5.Text = "Check-Out";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(386, 320);
+            this.button3.Location = new System.Drawing.Point(290, 260);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 33);
+            this.button3.Size = new System.Drawing.Size(109, 27);
             this.button3.TabIndex = 4;
             this.button3.Text = "Remove Customer";
             this.button3.UseVisualStyleBackColor = true;
@@ -200,20 +200,20 @@
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(905, 574);
+            this.tabPage2.Size = new System.Drawing.Size(677, 464);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 623);
+            this.ClientSize = new System.Drawing.Size(683, 506);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
