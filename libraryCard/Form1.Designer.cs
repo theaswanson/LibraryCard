@@ -53,7 +53,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(531, 394);
+            this.button1.Location = new System.Drawing.Point(526, 650);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 50);
             this.button1.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(531, 322);
+            this.button2.Location = new System.Drawing.Point(526, 566);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 50);
             this.button2.TabIndex = 1;
@@ -155,7 +155,7 @@
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1247, 867);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
@@ -163,8 +163,8 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(369, 373);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(500, 274);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(250, 70);
             this.button4.TabIndex = 6;
@@ -173,7 +173,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(507, 237);
+            this.button5.Location = new System.Drawing.Point(500, 378);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(250, 70);
             this.button5.TabIndex = 5;
@@ -182,7 +182,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(531, 480);
+            this.button3.Location = new System.Drawing.Point(526, 482);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(199, 50);
             this.button3.TabIndex = 4;
@@ -194,7 +194,7 @@
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1247, 867);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
