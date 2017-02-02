@@ -25,28 +25,47 @@ namespace libraryCard
         private void button1_Click(object sender, EventArgs e)
         {
             Form3 addCustomer = new Form3();
-            addCustomer.Show();
+            if (Application.OpenForms[addCustomer.Name] == null)
+                addCustomer.Show();
+            else
+                Application.OpenForms[addCustomer.Name].Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 addBook = new Form2();
-            addBook.Show();
+            if (Application.OpenForms[addBook.Name] == null)
+                addBook.Show();
+            else
+                Application.OpenForms[addBook.Name].Focus();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Form4 removeCustomer = new Form4();
+            if (Application.OpenForms[removeCustomer.Name] == null)
+                removeCustomer.Show();
+            else
+                Application.OpenForms[removeCustomer.Name].Focus();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form5 checkIn = new Form5();
+            if (Application.OpenForms[checkIn.Name] == null)
+                checkIn.Show();
+            else
+                Application.OpenForms[checkIn.Name].Focus();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Form6 checkOut = new Form6();
+            if (Application.OpenForms[checkOut.Name] == null)
+                checkOut.Show();
+            else
+                Application.OpenForms[checkOut.Name].Focus();
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,13 +76,19 @@ namespace libraryCard
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 addBook = new Form2();
-            addBook.Show();
+            if (Application.OpenForms[addBook.Name] == null)
+                addBook.Show();
+            else
+                Application.OpenForms[addBook.Name].Focus();
         }
 
         private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 addCustomer = new Form3();
-            addCustomer.Show();
+            if (Application.OpenForms[addCustomer.Name] == null)
+                addCustomer.Show();
+            else
+                Application.OpenForms[addCustomer.Name].Focus();
 
         }
 
