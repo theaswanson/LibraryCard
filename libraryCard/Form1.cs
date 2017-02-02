@@ -101,6 +101,24 @@ namespace libraryCard
         {
             Application.Exit();
         }
+
+        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 checkOut = new Form6();
+            if (Application.OpenForms[checkOut.Name] == null)
+                checkOut.Show();
+            else
+                Application.OpenForms[checkOut.Name].Focus();
+        }
+
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 checkIn = new Form5();
+            if (Application.OpenForms[checkIn.Name] == null)
+                checkIn.Show();
+            else
+                Application.OpenForms[checkIn.Name].Focus();
+        }
     }
 }
 
