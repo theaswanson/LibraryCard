@@ -34,6 +34,21 @@ namespace libraryCard
             addBook.Show();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
