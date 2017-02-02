@@ -53,6 +53,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Location = new System.Drawing.Point(290, 214);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -64,6 +65,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Location = new System.Drawing.Point(290, 175);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
@@ -106,7 +108,7 @@
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
@@ -127,6 +129,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -142,11 +145,13 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 17);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(685, 490);
+            this.tabControl1.Size = new System.Drawing.Size(683, 482);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -163,13 +168,14 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(677, 464);
+            this.tabPage1.Size = new System.Drawing.Size(675, 456);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.Location = new System.Drawing.Point(277, 299);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
@@ -180,6 +186,7 @@
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.Location = new System.Drawing.Point(277, 358);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
@@ -190,6 +197,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Location = new System.Drawing.Point(290, 254);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
@@ -197,6 +205,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Remove Customer";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage2
             // 
@@ -214,13 +223,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(683, 506);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.HelpButton = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
