@@ -21,17 +21,17 @@ namespace libraryCard
         {
 
         }
-            
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form2 addBook = new Form2();
-            addBook.Show();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form3 addCustomer = new Form3();
             addCustomer.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 addBook = new Form2();
+            addBook.Show();
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
