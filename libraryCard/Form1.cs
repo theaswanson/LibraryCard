@@ -60,24 +60,6 @@ namespace libraryCard
         {
             Application.Exit();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form5 checkIn = new Form5();
-            checkIn.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form4 removeCustomer = new Form4();
-            removeCustomer.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Form6 checkOut = new Form6();
-            checkOut.Show();
-        }
     }
 }
 
