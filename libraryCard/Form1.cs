@@ -49,6 +49,7 @@ namespace libraryCard
         {
             Form3 addCustomer = new Form3();
             addCustomer.Show();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
