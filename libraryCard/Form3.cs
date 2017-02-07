@@ -27,6 +27,19 @@ namespace libraryCard
             this.Close();
         }
 
-       
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged_1(object sender, DateRangeEventArgs e)
+        {
+
+        }
     }
 }
