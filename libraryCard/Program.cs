@@ -18,33 +18,40 @@ namespace libraryCard
 
         public void getBookInfo()
         {
-
+            //pull info from the "books" table, store in variables, then print information
         }
         public void bookFind()
         {
-
+            //print book information from the "books" table, given bookID
         }
         public void checkOut()
         {
-
+            //generate checkoutID
+            //get customerID, bookID, outDate, bookCondition
+            //set bookStatus to "on time"
         }
         public void checkIn()
         {
-
+            //get checkoutID
+            //set inDate to current time
+            //set bookStatus to "checked in"
         }
     }
 
     class customerType
     {
-        private string name;
+        private string customerID;
+        private string FName;
+        private string LName;
+        private string phone;
         private string address;
-        private int phoneNum;
+        private string birthdate;
         private bool bookStat;
         private string bookCheck;
 
         public void getInfo()
         {
-
+            //print customer information from the "customers" table, given customerID
         }
     }
 
