@@ -8,22 +8,65 @@ namespace libraryCard
 {
     class bookType
     {
-        private string bookID;
+        //variables
+
+        private int bookID;
         private string ISBN;
         private string title;
         private string author;
         private string genre;
-        private string pageCount;
+        private int pageCount;
         private string bookCondition;
 
-        public void getBookInfo()
+
+        /* print functions */
+        public void print()
         {
             //pull info from the "books" table, store in variables, then print information
         }
+
+
+        /* lookup functions */
         public void bookFind()
         {
             //print book information from the "books" table, given bookID
         }
+
+
+        /* set functions */
+
+        public void setID(int ID)
+        {
+            bookID = ID;
+        }
+        public void setISBN(string isbn)
+        {
+            ISBN = isbn;
+        }
+        public void setTitle(string name)
+        {
+            title = name;
+        }
+        public void setAuthor(string name)
+        {
+            author = name;
+        }
+        public void setGenre(string name)
+        {
+            genre = name;
+        }
+        public void setPageCount(int num)
+        {
+            pageCount = num;
+        }
+        public void setCondition(string condition)
+        {
+            bookCondition = condition;
+        }
+
+
+        /* checkout functions */
+
         public void checkOut()
         {
             //generate checkoutID
@@ -40,7 +83,7 @@ namespace libraryCard
 
     class customerType
     {
-        private string customerID;
+        private int customerID;
         private string FName;
         private string LName;
         private string phone;
@@ -49,10 +92,33 @@ namespace libraryCard
         private bool bookStat;
         private string bookCheck;
 
-        public void getInfo()
+
+        /* print functions */
+        public void print()
         {
             //print customer information from the "customers" table, given customerID
         }
+
+        /* set functions */
+
+        public void setID(int ID)
+        {
+            customerID = ID;
+        }
+        public void setName(string fname, string lname)
+        {
+            FName = fname;
+            LName = lname;
+        }
+        public void setPhone(string phoneNum)
+        {
+            phone = phoneNum;
+        }
+        public void setBirth(string date)
+        {
+            birthdate = date;
+        }
+
     }
 
     static class Program
