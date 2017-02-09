@@ -104,7 +104,7 @@
             this.author.Location = new System.Drawing.Point(393, 68);
             this.author.Margin = new System.Windows.Forms.Padding(4);
             this.author.Name = "author";
-            this.author.Size = new System.Drawing.Size(284, 29);
+            this.author.Size = new System.Drawing.Size(314, 29);
             this.author.TabIndex = 18;
             // 
             // label2

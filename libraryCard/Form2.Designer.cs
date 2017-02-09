@@ -44,6 +44,8 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             // bookTitle
             // 
             this.bookTitle.Location = new System.Drawing.Point(143, 68);
-            this.bookTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bookTitle.Margin = new System.Windows.Forms.Padding(4);
             this.bookTitle.Name = "bookTitle";
             this.bookTitle.Size = new System.Drawing.Size(398, 29);
             this.bookTitle.TabIndex = 1;
@@ -79,7 +81,7 @@
             // author
             // 
             this.author.Location = new System.Drawing.Point(143, 135);
-            this.author.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.author.Margin = new System.Windows.Forms.Padding(4);
             this.author.Name = "author";
             this.author.Size = new System.Drawing.Size(398, 29);
             this.author.TabIndex = 3;
@@ -97,7 +99,7 @@
             // ISBN
             // 
             this.ISBN.Location = new System.Drawing.Point(143, 199);
-            this.ISBN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ISBN.Margin = new System.Windows.Forms.Padding(4);
             this.ISBN.Name = "ISBN";
             this.ISBN.Size = new System.Drawing.Size(398, 29);
             this.ISBN.TabIndex = 5;
@@ -105,7 +107,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(143, 589);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 41);
             this.button1.TabIndex = 6;
@@ -116,7 +118,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(288, 589);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 41);
             this.button2.TabIndex = 7;
@@ -137,7 +139,7 @@
             // genre
             // 
             this.genre.Location = new System.Drawing.Point(143, 266);
-            this.genre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genre.Margin = new System.Windows.Forms.Padding(4);
             this.genre.Name = "genre";
             this.genre.Size = new System.Drawing.Size(398, 29);
             this.genre.TabIndex = 9;
@@ -145,8 +147,8 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(83, 506);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Location = new System.Drawing.Point(118, 509);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(78, 29);
             this.radioButton1.TabIndex = 10;
@@ -158,8 +160,8 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(83, 469);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Location = new System.Drawing.Point(118, 472);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(70, 29);
             this.radioButton2.TabIndex = 11;
@@ -171,8 +173,8 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(83, 436);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Location = new System.Drawing.Point(118, 439);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(85, 29);
             this.radioButton3.TabIndex = 12;
@@ -184,8 +186,8 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(83, 401);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton4.Location = new System.Drawing.Point(118, 404);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(76, 29);
             this.radioButton4.TabIndex = 13;
@@ -196,12 +198,31 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 356);
+            this.label5.Location = new System.Drawing.Point(114, 359);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 25);
             this.label5.TabIndex = 14;
             this.label5.Text = "Condition";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(283, 359);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 25);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Publication Year";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(288, 403);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 29);
+            this.textBox1.TabIndex = 17;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // Form2
             // 
@@ -209,6 +230,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(576, 655);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -225,7 +248,7 @@
             this.Controls.Add(this.bookTitle);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -253,5 +276,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
