@@ -8,13 +8,13 @@ namespace libraryCard
 {
     class bookType
     {
+        private string bookID;
         private string ISBN;
-        private string ID;
         private string title;
         private string author;
-        private bool inStock;
         private string genre;
-        private string condition;
+        private string pageCount;
+        private string bookCondition;
 
         public void getBookInfo()
         {

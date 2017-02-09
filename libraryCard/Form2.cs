@@ -27,32 +27,63 @@ namespace libraryCard
             this.Close();
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void condGood_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void condPoor_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void getData_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(bookTitle);
+            //Console.WriteLine(bookTitle);
+            MessageBox.Show("Title: " + this.bookTitle.Text);
+            MessageBox.Show("Author: " + this.author.Text);
+            MessageBox.Show("ISBN: " + this.ISBN.Text);
+            MessageBox.Show("Genre: " + this.genre.Text);
+            MessageBox.Show("Year Published: " + this.year.Text);
+            MessageBox.Show("Page Count: " + this.pageCount.Text);
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void condFair_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void bookTitle_TextChanged(object sender, EventArgs e)
         {
             string title = bookTitle.Text;
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void year_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void condNew_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void author_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ISBN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pageCount_TextChanged(object sender, EventArgs e)
         {
 
         }
