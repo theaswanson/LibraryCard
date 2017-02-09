@@ -40,12 +40,12 @@ namespace libraryCard
         private void getData_Click(object sender, EventArgs e)
         {
             //Console.WriteLine(bookTitle);
-            MessageBox.Show("Title: " + this.bookTitle.Text);
-            MessageBox.Show("Author: " + this.author.Text);
-            MessageBox.Show("ISBN: " + this.ISBN.Text);
-            MessageBox.Show("Genre: " + this.genre.Text);
-            MessageBox.Show("Year Published: " + this.year.Text);
-            MessageBox.Show("Page Count: " + this.pageCount.Text);
+            MessageBox.Show("Title: " + this.bookTitle.Text +
+                "\nAuthor: " + this.author.Text +
+                "\nISBN: " + this.ISBN.Text +
+                "\nGenre: " + this.genre.Text +
+                "\nYear Published: " + this.year.Text +
+                "\nPage Count: " + this.pageCount.Text);
         }
 
         private void condFair_CheckedChanged(object sender, EventArgs e)
