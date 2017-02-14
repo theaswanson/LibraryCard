@@ -50,8 +50,9 @@ namespace libraryCard
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string address = stAddress + " " + city + ", " + state + " " + zip;
-            string birthDate = month + "/" + day + "/" + year;
+            string address = this.stAddress.Text + " " + this.city.Text + ", " + this.state.Text + " " + this.zip.Text;
+            string birthDate = this.month.Text + "/" + this.day.Text + "/" + this.year.Text;
+            
 
             string constring = "datasource=teh.ddns.net;port=3306;username=scrub;password=librarycard";
             string Query = "INSERT INTO librarycard.customers (FName,LName,phone,address,birthdate) values('" + this.fname.Text + "','" + this.lname.Text + "','" + this.phoneNum.Text + "','" + address + "','" + birthDate + "') ;";
@@ -62,7 +63,7 @@ namespace libraryCard
             {
                 conDataBase.Open();
                 myReader = cmdDataBase.ExecuteReader();
-                MessageBox.Show("Book Saved");
+                MessageBox.Show("Customer Saved");
                 while (myReader.Read())
                 {
 
