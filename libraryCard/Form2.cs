@@ -41,7 +41,7 @@ namespace libraryCard
 
         private void getData_Click(object sender, EventArgs e)
         {
-            //Console.WriteLine(bookTitle);
+            //Console.WriteLine(bookTitle);0
             /*MessageBox.Show("Title: " + this.bookTitle.Text +
                 "\nAuthor: " + this.author.Text +
                 "\nISBN: " + this.ISBN.Text +
