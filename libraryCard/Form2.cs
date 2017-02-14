@@ -48,8 +48,27 @@ namespace libraryCard
                 "\nGenre: " + this.genre.Text +
                 "\nYear Published: " + this.year.Text +
                 "\nPage Count: " + this.pageCount.Text);*/
+
+            string cond_ = "";
+
+            if (condNew.Checked == true)
+                cond_ = "New";
+
+            else if (condGood.Checked == true)
+                cond_ = "Good";
+
+            else if (condFair.Checked == true)
+                cond_ = "Fair";
+
+            else if (condPoor.Checked == true)
+                cond_ = "Poor";
+
+            else
+                cond_ = "";
+
+
             string constring = "datasource=teh.ddns.net;port=3306;username=scrub;password=librarycard";
-            string Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "') ;";
+            string Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
             MySqlDataReader myReader;
