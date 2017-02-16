@@ -82,10 +82,9 @@ namespace libraryCard
                 "\nGenre: " + this.genre.Text +
                 "\nYear Published: " + this.year.Text +
                 "\nPage Count: " + this.pageCount.Text);
-                while (myReader.Read())
-                {
-
-                }
+            //    while (myReader.Read())
+            //    {
+            //    }
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
