@@ -264,7 +264,7 @@
             // 
             // searchDo
             // 
-            this.searchDo.Location = new System.Drawing.Point(573, 145);
+            this.searchDo.Location = new System.Drawing.Point(573, 157);
             this.searchDo.Name = "searchDo";
             this.searchDo.Size = new System.Drawing.Size(75, 23);
             this.searchDo.TabIndex = 3;

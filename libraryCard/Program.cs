@@ -131,7 +131,8 @@ namespace libraryCard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1()); //new logInForm()
+            Application.Run(new Form1()); //start program
+            //Application.Run(new logInForm());  opens the login form
         }
     }
 }

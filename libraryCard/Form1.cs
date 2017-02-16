@@ -25,7 +25,8 @@ namespace libraryCard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            this.searchSelection.SelectedIndex = 0;
+            searchData();
         }
 
         public void searchData()
