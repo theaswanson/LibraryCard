@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace libraryCard
 {
     public partial class Form1 : Form
     {
+        MySqlConnection connection = new MySqlConnection("datasource = teh.ddns.net;port = 3306; Initial Catalog = 'librarycard'; username = scrub; password=librarycard");
+        MySqlCommand command;
+        MySqlDataAdapter adapter;
+        DataTable table;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +25,17 @@ namespace libraryCard
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        public void searchData()
+        {
+            string query = "SELECT * FROM books WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
+            command = new MySqlCommand(query, connection);
+            adapter = new MySqlDataAdapter(command);
+            table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -118,6 +134,26 @@ namespace libraryCard
                 checkIn.Show();
             else
                 Application.OpenForms[checkIn.Name].Focus();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            searchData();
+        }
+
+        private void searchSelection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
