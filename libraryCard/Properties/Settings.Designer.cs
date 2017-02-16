@@ -33,5 +33,16 @@ namespace libraryCard.Properties {
                 return ((string)(this["libraryCardDataConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=teh.ddns.net;user id=scrub;database=librarycard;allowuservariables=True;pa" +
+            "ssword=librarycard")]
+        public string librarycardConnectionString {
+            get {
+                return ((string)(this["librarycardConnectionString"]));
+            }
+        }
     }
 }
