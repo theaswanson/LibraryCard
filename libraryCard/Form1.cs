@@ -18,6 +18,8 @@ namespace libraryCard
         MySqlDataAdapter adapter;
         DataTable table;
 
+        string table_, field_;
+
         public Form1()
         {
             InitializeComponent();
@@ -33,14 +35,124 @@ namespace libraryCard
         public void searchData()
         {
             //Used on our search page, Allows user to search database with their specifications
-            
-            string query = "SELECT * FROM " + this.searchTable.Text + " WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
-            command = new MySqlCommand(query, connection);
-            adapter = new MySqlDataAdapter(command);
-            //Outputs Table
-            table = new DataTable();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
+
+            switch (this.searchTable.Text) //converts English table options to database names
+            {
+                case "Books":
+                    table_ = "books";
+                    break;
+                case "Customers":
+                    table_ = "customers";
+                    break;
+                case "Checkout":
+                    table_ = "checkout";
+                    break;
+                case "":
+                    table_ = "errorInTableSwitch";
+                    break;
+            }
+
+            switch (this.searchSelection.Text) //converts English field options to database names
+            {
+                //Books
+                case "Book ID":
+                    field_ = "bookID";
+                    break;
+                case "Title":
+                    field_ = "title";
+                    break;
+                case "Author":
+                    field_ = "author";
+                    break;
+                case "Genre":
+                    field_ = "genre";
+                    break;
+                case "ISBN":
+                    field_ = "isbn";
+                    break;
+
+                //Customers
+                case "Customer ID":
+                    field_ = "customerID";
+                    break;
+                case "First Name":
+                    field_ = "FName";
+                    break;
+                case "Last Name":
+                    field_ = "LName";
+                    break;
+                case "Phone":
+                    field_ = "phone";
+                    break;
+                case "Address":
+                    field_ = "address";
+                    break;
+                case "Birthdate":
+                    field_ = "birthdate";
+                    break;
+
+                //Checkout
+                case "Check-out date":
+                    field_ = "outDate";
+                    break;
+                case "Check-in date":
+                    field_ = "inDate";
+                    break;
+                case "Book Status":
+                    field_ = "bookStatus";
+                    break;
+                case "":
+                    table_ = "errorInFieldSwitch";
+                    break;
+            }
+
+            if (table_ == "customers")
+            {
+                if (this.searchText.Text == "") //if user is trying to bring up all customer information
+                {
+                    //"Enter something in search box"
+                }
+                else
+                {
+                    string[] badChars = {";", "'"};
+                    foreach (string x in badChars) //check for unallowed characters
+                    {
+                        if (this.searchText.Text.Contains(x))
+                        {
+                            this.searchText.Text = "";
+                        }
+                    }
+
+                    //string query = "SELECT * FROM " + this.searchTable.Text + " WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
+                    string query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                    command = new MySqlCommand(query, connection);
+                    adapter = new MySqlDataAdapter(command);
+                    //Outputs Table
+                    table = new DataTable();
+                    adapter.Fill(table);
+                    dataGridView1.DataSource = table;
+                }
+            }
+            else
+            {
+                string[] badChars = { ";", "'" };
+                foreach (string x in badChars) //check for unallowed characters
+                {
+                    if (this.searchText.Text.Contains(x))
+                    {
+                        this.searchText.Text = "";
+                    }
+                }
+
+                string query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                command = new MySqlCommand(query, connection);
+                adapter = new MySqlDataAdapter(command);
+                //Outputs Table
+                table = new DataTable();
+                adapter.Fill(table);
+                dataGridView1.DataSource = table;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -171,26 +283,37 @@ namespace libraryCard
         {
             searchSelection.Items.Clear(); //clears field selections that may exist in different tables
 
-            if (this.searchTable.Text == "books") //if books table is selected
+            if (this.searchTable.Text == "Books") //if books table is selected
             {
                 //present book fields
 
-                searchSelection.Items.Add("title");
-                searchSelection.Items.Add("author");
-                searchSelection.Items.Add("genre");
-                searchSelection.Items.Add("isbn");
-                searchSelection.Items.Add("bookID");
+                searchSelection.Items.Add("Book ID");
+                searchSelection.Items.Add("Title");
+                searchSelection.Items.Add("Author");
+                searchSelection.Items.Add("Genre");
+                searchSelection.Items.Add("ISBN");
             }
-            else if (this.searchTable.Text == "checkout") //if checkout table is selected
+            else if (this.searchTable.Text == "Customers") //if checkout table is selected
             {
                 //present checkout fields
 
-                searchSelection.Items.Add("checkoutID");
-                searchSelection.Items.Add("customerID");
-                searchSelection.Items.Add("bookID");
-                searchSelection.Items.Add("outDate");
-                searchSelection.Items.Add("inDate");
-                searchSelection.Items.Add("bookStatus");
+                searchSelection.Items.Add("Customer ID");
+                searchSelection.Items.Add("First Name");
+                searchSelection.Items.Add("Last Name");
+                searchSelection.Items.Add("Phone");
+                searchSelection.Items.Add("Address");
+                searchSelection.Items.Add("Birthdate");
+            }
+            else if (this.searchTable.Text == "Checkout") //if checkout table is selected
+            {
+                //present checkout fields
+
+                searchSelection.Items.Add("Checkout ID");
+                searchSelection.Items.Add("Customer ID");
+                searchSelection.Items.Add("Book ID");
+                searchSelection.Items.Add("Check-out date");
+                searchSelection.Items.Add("Check-in date");
+                searchSelection.Items.Add("Book Status");
             }
 
             this.searchSelection.SelectedIndex = 0; //selects first option by default

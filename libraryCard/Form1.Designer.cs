@@ -113,14 +113,14 @@
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
@@ -137,14 +137,14 @@
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.checkOutToolStripMenuItem.Text = "Check-Out";
             this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.checkInToolStripMenuItem.Text = "Check-In";
             this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
@@ -159,7 +159,7 @@
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -271,8 +271,9 @@
             this.searchTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchTable.FormattingEnabled = true;
             this.searchTable.Items.AddRange(new object[] {
-            "books",
-            "checkout"});
+            "Books",
+            "Customers",
+            "Checkout"});
             this.searchTable.Location = new System.Drawing.Point(71, 149);
             this.searchTable.Name = "searchTable";
             this.searchTable.Size = new System.Drawing.Size(121, 21);
@@ -294,12 +295,6 @@
             this.searchSelection.AllowDrop = true;
             this.searchSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchSelection.FormattingEnabled = true;
-            this.searchSelection.Items.AddRange(new object[] {
-            "title",
-            "author",
-            "genre",
-            "isbn",
-            "bookID"});
             this.searchSelection.Location = new System.Drawing.Point(198, 149);
             this.searchSelection.Name = "searchSelection";
             this.searchSelection.Size = new System.Drawing.Size(121, 21);
