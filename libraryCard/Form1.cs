@@ -25,9 +25,9 @@ namespace libraryCard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.searchTable.SelectedIndex = 0;
-            this.searchSelection.SelectedIndex = 0;
-            searchData();
+            this.searchTable.SelectedIndex = 0; //selects first option by default
+            this.searchSelection.SelectedIndex = 0; //selects first option by default
+            searchData(); //search first table initially
         }
 
         public void searchData()
@@ -169,17 +169,22 @@ namespace libraryCard
 
         private void searchTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            searchSelection.Items.Clear();
-            if (this.searchTable.Text == "books")
+            searchSelection.Items.Clear(); //clears field selections that may exist in different tables
+
+            if (this.searchTable.Text == "books") //if books table is selected
             {
+                //present book fields
+
                 searchSelection.Items.Add("title");
                 searchSelection.Items.Add("author");
                 searchSelection.Items.Add("genre");
                 searchSelection.Items.Add("isbn");
                 searchSelection.Items.Add("bookID");
             }
-            else if (this.searchTable.Text == "checkout")
+            else if (this.searchTable.Text == "checkout") //if checkout table is selected
             {
+                //present checkout fields
+
                 searchSelection.Items.Add("checkoutID");
                 searchSelection.Items.Add("customerID");
                 searchSelection.Items.Add("bookID");
@@ -187,11 +192,18 @@ namespace libraryCard
                 searchSelection.Items.Add("inDate");
                 searchSelection.Items.Add("bookStatus");
             }
+
+            this.searchSelection.SelectedIndex = 0; //selects first option by default
         }
 
         private void searchSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void checkInOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
