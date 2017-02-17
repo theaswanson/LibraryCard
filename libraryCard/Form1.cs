@@ -31,9 +31,12 @@ namespace libraryCard
 
         public void searchData()
         {
+            //Used on our search page, Allows user to search database with their specifications
+            
             string query = "SELECT * FROM books WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
+            //Outputs Table
             table = new DataTable();
             adapter.Fill(table);
             dataGridView1.DataSource = table;
@@ -41,6 +44,7 @@ namespace libraryCard
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 3, which is reading in a customer to the database
             Form3 addCustomer = new Form3();
             if (Application.OpenForms[addCustomer.Name] == null)
                 addCustomer.Show();
@@ -49,7 +53,9 @@ namespace libraryCard
         }
 
         private void button2_Click(object sender, EventArgs e)
+
         {
+            //Function for going to Form 2, which is reading in a book to the database
             Form2 addBook = new Form2();
             if (Application.OpenForms[addBook.Name] == null)
                 addBook.Show();
@@ -60,6 +66,7 @@ namespace libraryCard
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 4, which is used to remove a customer
             Form4 removeCustomer = new Form4();
             if (Application.OpenForms[removeCustomer.Name] == null)
                 removeCustomer.Show();
@@ -69,6 +76,7 @@ namespace libraryCard
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 5, which is used to remove a book
             Form5 checkIn = new Form5();
             if (Application.OpenForms[checkIn.Name] == null)
                 checkIn.Show();
@@ -78,6 +86,7 @@ namespace libraryCard
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 6, which is used to Check-Out a book to a customer
             Form6 checkOut = new Form6();
             if (Application.OpenForms[checkOut.Name] == null)
                 checkOut.Show();
@@ -92,6 +101,7 @@ namespace libraryCard
 
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 2, which is reading in a book to the database| from drop down menu
             Form2 addBook = new Form2();
             if (Application.OpenForms[addBook.Name] == null)
                 addBook.Show();
@@ -101,6 +111,7 @@ namespace libraryCard
 
         private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 3, which is reading in a customer to the database| from drop down menu
             Form3 addCustomer = new Form3();
             if (Application.OpenForms[addCustomer.Name] == null)
                 addCustomer.Show();
@@ -116,11 +127,13 @@ namespace libraryCard
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            //Exits the program| from drop down menu
             Application.Exit();
         }
 
         private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 6, which is used to Check-Out a book to a customer| from drop down menu
             Form6 checkOut = new Form6();
             if (Application.OpenForms[checkOut.Name] == null)
                 checkOut.Show();
@@ -130,6 +143,7 @@ namespace libraryCard
 
         private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 6, which is used to Check-In a book from a customer| from drop down menu
             Form5 checkIn = new Form5();
             if (Application.OpenForms[checkIn.Name] == null)
                 checkIn.Show();
