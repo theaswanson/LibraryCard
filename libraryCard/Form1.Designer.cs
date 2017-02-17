@@ -49,6 +49,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.searchTable = new System.Windows.Forms.ComboBox();
             this.searchDo = new System.Windows.Forms.Button();
             this.searchSelection = new System.Windows.Forms.ComboBox();
             this.searchText = new System.Windows.Forms.TextBox();
@@ -112,14 +113,14 @@
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
@@ -135,14 +136,14 @@
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.checkOutToolStripMenuItem.Text = "Check-Out";
             this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.checkInToolStripMenuItem.Text = "Check-In";
             this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
@@ -157,7 +158,7 @@
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -249,6 +250,7 @@
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.searchTable);
             this.tabPage2.Controls.Add(this.searchDo);
             this.tabPage2.Controls.Add(this.searchSelection);
             this.tabPage2.Controls.Add(this.searchText);
@@ -262,12 +264,26 @@
             this.tabPage2.Text = "Search";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // searchTable
+            // 
+            this.searchTable.AllowDrop = true;
+            this.searchTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchTable.FormattingEnabled = true;
+            this.searchTable.Items.AddRange(new object[] {
+            "books",
+            "checkout"});
+            this.searchTable.Location = new System.Drawing.Point(71, 149);
+            this.searchTable.Name = "searchTable";
+            this.searchTable.Size = new System.Drawing.Size(121, 21);
+            this.searchTable.TabIndex = 1;
+            this.searchTable.SelectedIndexChanged += new System.EventHandler(this.searchTable_SelectedIndexChanged);
+            // 
             // searchDo
             // 
-            this.searchDo.Location = new System.Drawing.Point(573, 157);
+            this.searchDo.Location = new System.Drawing.Point(687, 147);
             this.searchDo.Name = "searchDo";
             this.searchDo.Size = new System.Drawing.Size(75, 23);
-            this.searchDo.TabIndex = 3;
+            this.searchDo.TabIndex = 4;
             this.searchDo.Text = "Search";
             this.searchDo.UseVisualStyleBackColor = true;
             this.searchDo.Click += new System.EventHandler(this.button6_Click);
@@ -283,7 +299,7 @@
             "genre",
             "isbn",
             "bookID"});
-            this.searchSelection.Location = new System.Drawing.Point(84, 159);
+            this.searchSelection.Location = new System.Drawing.Point(198, 149);
             this.searchSelection.Name = "searchSelection";
             this.searchSelection.Size = new System.Drawing.Size(121, 21);
             this.searchSelection.TabIndex = 2;
@@ -291,10 +307,10 @@
             // 
             // searchText
             // 
-            this.searchText.Location = new System.Drawing.Point(211, 160);
+            this.searchText.Location = new System.Drawing.Point(325, 150);
             this.searchText.Name = "searchText";
             this.searchText.Size = new System.Drawing.Size(356, 20);
-            this.searchText.TabIndex = 1;
+            this.searchText.TabIndex = 3;
             this.searchText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
@@ -371,6 +387,7 @@
         private System.Windows.Forms.TextBox searchText;
         private System.Windows.Forms.Button searchDo;
         private System.Windows.Forms.ComboBox searchSelection;
+        private System.Windows.Forms.ComboBox searchTable;
     }
 }
 

@@ -25,6 +25,7 @@ namespace libraryCard
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.searchTable.SelectedIndex = 0;
             this.searchSelection.SelectedIndex = 0;
             searchData();
         }
@@ -33,7 +34,7 @@ namespace libraryCard
         {
             //Used on our search page, Allows user to search database with their specifications
             
-            string query = "SELECT * FROM books WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
+            string query = "SELECT * FROM " + this.searchTable.Text + " WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
             //Outputs Table
@@ -166,9 +167,31 @@ namespace libraryCard
             searchData();
         }
 
+        private void searchTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            searchSelection.Items.Clear();
+            if (this.searchTable.Text == "books")
+            {
+                searchSelection.Items.Add("title");
+                searchSelection.Items.Add("author");
+                searchSelection.Items.Add("genre");
+                searchSelection.Items.Add("isbn");
+                searchSelection.Items.Add("bookID");
+            }
+            else if (this.searchTable.Text == "checkout")
+            {
+                searchSelection.Items.Add("checkoutID");
+                searchSelection.Items.Add("customerID");
+                searchSelection.Items.Add("bookID");
+                searchSelection.Items.Add("outDate");
+                searchSelection.Items.Add("inDate");
+                searchSelection.Items.Add("bookStatus");
+            }
+        }
+
         private void searchSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
