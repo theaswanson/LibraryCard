@@ -49,6 +49,8 @@ namespace libraryCard
                 "\nYear Published: " + this.year.Text +
                 "\nPage Count: " + this.pageCount.Text);*/
 
+
+            //checks to see condition of book from 4 bool options
             string cond_ = "";
 
             if (condNew.Checked == true)

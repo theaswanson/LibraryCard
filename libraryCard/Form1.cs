@@ -20,6 +20,8 @@ namespace libraryCard
         MySqlDataAdapter adapter;
         DataTable table;
 
+        string table_, field_;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,8 +29,9 @@ namespace libraryCard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.searchSelection.SelectedIndex = 0;
-            searchData();
+            this.searchTable.SelectedIndex = 0; //selects first option by default
+            this.searchSelection.SelectedIndex = 0; //selects first option by default
+            searchData(); //search first table initially
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -38,16 +41,130 @@ namespace libraryCard
 
         public void searchData()
         {
-            string query = "SELECT * FROM books WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
-            command = new MySqlCommand(query, connection);
-            adapter = new MySqlDataAdapter(command);
-            table = new DataTable();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
+            //Used on our search page, Allows user to search database with their specifications
+
+            switch (this.searchTable.Text) //converts English table options to database names
+            {
+                case "Books":
+                    table_ = "books";
+                    break;
+                case "Customers":
+                    table_ = "customers";
+                    break;
+                case "Checkout":
+                    table_ = "checkout";
+                    break;
+                case "":
+                    table_ = "errorInTableSwitch";
+                    break;
+            }
+
+            switch (this.searchSelection.Text) //converts English field options to database names
+            {
+                //Books
+                case "Book ID":
+                    field_ = "bookID";
+                    break;
+                case "Title":
+                    field_ = "title";
+                    break;
+                case "Author":
+                    field_ = "author";
+                    break;
+                case "Genre":
+                    field_ = "genre";
+                    break;
+                case "ISBN":
+                    field_ = "isbn";
+                    break;
+
+                //Customers
+                case "Customer ID":
+                    field_ = "customerID";
+                    break;
+                case "First Name":
+                    field_ = "FName";
+                    break;
+                case "Last Name":
+                    field_ = "LName";
+                    break;
+                case "Phone":
+                    field_ = "phone";
+                    break;
+                case "Address":
+                    field_ = "address";
+                    break;
+                case "Birthdate":
+                    field_ = "birthdate";
+                    break;
+
+                //Checkout
+                case "Check-out date":
+                    field_ = "outDate";
+                    break;
+                case "Check-in date":
+                    field_ = "inDate";
+                    break;
+                case "Book Status":
+                    field_ = "bookStatus";
+                    break;
+                case "":
+                    table_ = "errorInFieldSwitch";
+                    break;
+            }
+
+            if (table_ == "customers")
+            {
+                if (this.searchText.Text == "") //if user is trying to bring up all customer information
+                {
+                    //"Enter something in search box"
+                }
+                else
+                {
+                    string[] badChars = {";", "'"};
+                    foreach (string x in badChars) //check for unallowed characters
+                    {
+                        if (this.searchText.Text.Contains(x))
+                        {
+                            this.searchText.Text = "";
+                        }
+                    }
+
+                    //string query = "SELECT * FROM " + this.searchTable.Text + " WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
+                    string query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                    command = new MySqlCommand(query, connection);
+                    adapter = new MySqlDataAdapter(command);
+                    //Outputs Table
+                    table = new DataTable();
+                    adapter.Fill(table);
+                    dataGridView1.DataSource = table;
+                }
+            }
+            else
+            {
+                string[] badChars = { ";", "'" };
+                foreach (string x in badChars) //check for unallowed characters
+                {
+                    if (this.searchText.Text.Contains(x))
+                    {
+                        this.searchText.Text = "";
+                    }
+                }
+
+                string query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                command = new MySqlCommand(query, connection);
+                adapter = new MySqlDataAdapter(command);
+                //Outputs Table
+                table = new DataTable();
+                adapter.Fill(table);
+                dataGridView1.DataSource = table;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 3, which is reading in a customer to the database
             Form3 addCustomer = new Form3();
             if (Application.OpenForms[addCustomer.Name] == null)
                 addCustomer.Show();
@@ -56,9 +173,9 @@ namespace libraryCard
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
 
-            MessageBox.Show(db_type.db_hostname);
+        {
+            //Function for going to Form 2, which is reading in a book to the database
             Form2 addBook = new Form2();
             if (Application.OpenForms[addBook.Name] == null)
                 addBook.Show();
@@ -69,6 +186,7 @@ namespace libraryCard
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 4, which is used to remove a customer
             Form4 removeCustomer = new Form4();
             if (Application.OpenForms[removeCustomer.Name] == null)
                 removeCustomer.Show();
@@ -78,6 +196,7 @@ namespace libraryCard
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 5, which is used to remove a book
             Form5 checkIn = new Form5();
             if (Application.OpenForms[checkIn.Name] == null)
                 checkIn.Show();
@@ -87,6 +206,7 @@ namespace libraryCard
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 6, which is used to Check-Out a book to a customer
             Form6 checkOut = new Form6();
             if (Application.OpenForms[checkOut.Name] == null)
                 checkOut.Show();
@@ -101,6 +221,7 @@ namespace libraryCard
 
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 2, which is reading in a book to the database| from drop down menu
             Form2 addBook = new Form2();
             if (Application.OpenForms[addBook.Name] == null)
                 addBook.Show();
@@ -110,6 +231,7 @@ namespace libraryCard
 
         private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 3, which is reading in a customer to the database| from drop down menu
             Form3 addCustomer = new Form3();
             if (Application.OpenForms[addCustomer.Name] == null)
                 addCustomer.Show();
@@ -125,11 +247,13 @@ namespace libraryCard
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            //Exits the program| from drop down menu
             Application.Exit();
         }
 
         private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 6, which is used to Check-Out a book to a customer| from drop down menu
             Form6 checkOut = new Form6();
             if (Application.OpenForms[checkOut.Name] == null)
                 checkOut.Show();
@@ -139,6 +263,7 @@ namespace libraryCard
 
         private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Function for going to Form 6, which is used to Check-In a book from a customer| from drop down menu
             Form5 checkIn = new Form5();
             if (Application.OpenForms[checkIn.Name] == null)
                 checkIn.Show();
@@ -161,7 +286,52 @@ namespace libraryCard
             searchData();
         }
 
+        private void searchTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            searchSelection.Items.Clear(); //clears field selections that may exist in different tables
+
+            if (this.searchTable.Text == "Books") //if books table is selected
+            {
+                //present book fields
+
+                searchSelection.Items.Add("Book ID");
+                searchSelection.Items.Add("Title");
+                searchSelection.Items.Add("Author");
+                searchSelection.Items.Add("Genre");
+                searchSelection.Items.Add("ISBN");
+            }
+            else if (this.searchTable.Text == "Customers") //if checkout table is selected
+            {
+                //present checkout fields
+
+                searchSelection.Items.Add("Customer ID");
+                searchSelection.Items.Add("First Name");
+                searchSelection.Items.Add("Last Name");
+                searchSelection.Items.Add("Phone");
+                searchSelection.Items.Add("Address");
+                searchSelection.Items.Add("Birthdate");
+            }
+            else if (this.searchTable.Text == "Checkout") //if checkout table is selected
+            {
+                //present checkout fields
+
+                searchSelection.Items.Add("Checkout ID");
+                searchSelection.Items.Add("Customer ID");
+                searchSelection.Items.Add("Book ID");
+                searchSelection.Items.Add("Check-out date");
+                searchSelection.Items.Add("Check-in date");
+                searchSelection.Items.Add("Book Status");
+            }
+
+            this.searchSelection.SelectedIndex = 0; //selects first option by default
+        }
+
         private void searchSelection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkInOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

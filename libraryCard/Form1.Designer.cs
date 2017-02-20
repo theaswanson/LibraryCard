@@ -49,6 +49,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.searchTable = new System.Windows.Forms.ComboBox();
             this.searchDo = new System.Windows.Forms.Button();
             this.searchSelection = new System.Windows.Forms.ComboBox();
             this.searchText = new System.Windows.Forms.TextBox();
@@ -104,8 +105,8 @@
             this.addBookToolStripMenuItem,
             this.addCustomerToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(63, 34);
-            this.fileToolStripMenuItem.Text = "Add";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
+            this.fileToolStripMenuItem.Text = "File";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // addBookToolStripMenuItem
@@ -130,6 +131,7 @@
             this.checkInOutToolStripMenuItem.Name = "checkInOutToolStripMenuItem";
             this.checkInOutToolStripMenuItem.Size = new System.Drawing.Size(150, 34);
             this.checkInOutToolStripMenuItem.Text = "Check-In/Out";
+            this.checkInOutToolStripMenuItem.Click += new System.EventHandler(this.checkInOutToolStripMenuItem_Click);
             // 
             // checkOutToolStripMenuItem
             // 
@@ -248,6 +250,7 @@
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.searchTable);
             this.tabPage2.Controls.Add(this.searchDo);
             this.tabPage2.Controls.Add(this.searchSelection);
             this.tabPage2.Controls.Add(this.searchText);
@@ -261,13 +264,27 @@
             this.tabPage2.Text = "Search";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // searchTable
+            // 
+            this.searchTable.AllowDrop = true;
+            this.searchTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchTable.FormattingEnabled = true;
+            this.searchTable.Items.AddRange(new object[] {
+            "Books",
+            "Customers",
+            "Checkout"});
+            this.searchTable.Location = new System.Drawing.Point(71, 149);
+            this.searchTable.Name = "searchTable";
+            this.searchTable.Size = new System.Drawing.Size(121, 21);
+            this.searchTable.TabIndex = 1;
+            this.searchTable.SelectedIndexChanged += new System.EventHandler(this.searchTable_SelectedIndexChanged);
+            // 
             // searchDo
             // 
-            this.searchDo.Location = new System.Drawing.Point(1051, 290);
-            this.searchDo.Margin = new System.Windows.Forms.Padding(6);
+            this.searchDo.Location = new System.Drawing.Point(687, 147);
             this.searchDo.Name = "searchDo";
-            this.searchDo.Size = new System.Drawing.Size(138, 42);
-            this.searchDo.TabIndex = 3;
+            this.searchDo.Size = new System.Drawing.Size(75, 23);
+            this.searchDo.TabIndex = 4;
             this.searchDo.Text = "Search";
             this.searchDo.UseVisualStyleBackColor = true;
             this.searchDo.Click += new System.EventHandler(this.button6_Click);
@@ -277,14 +294,7 @@
             this.searchSelection.AllowDrop = true;
             this.searchSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchSelection.FormattingEnabled = true;
-            this.searchSelection.Items.AddRange(new object[] {
-            "title",
-            "author",
-            "genre",
-            "isbn",
-            "bookID"});
-            this.searchSelection.Location = new System.Drawing.Point(154, 294);
-            this.searchSelection.Margin = new System.Windows.Forms.Padding(6);
+            this.searchSelection.Location = new System.Drawing.Point(198, 149);
             this.searchSelection.Name = "searchSelection";
             this.searchSelection.Size = new System.Drawing.Size(219, 32);
             this.searchSelection.TabIndex = 2;
@@ -292,23 +302,23 @@
             // 
             // searchText
             // 
-            this.searchText.Location = new System.Drawing.Point(387, 295);
-            this.searchText.Margin = new System.Windows.Forms.Padding(6);
+            this.searchText.Location = new System.Drawing.Point(325, 150);
             this.searchText.Name = "searchText";
-            this.searchText.Size = new System.Drawing.Size(649, 29);
-            this.searchText.TabIndex = 1;
+            this.searchText.Size = new System.Drawing.Size(356, 20);
+            this.searchText.TabIndex = 3;
             this.searchText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(4, 381);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.MinimumSize = new System.Drawing.Size(733, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1623, 853);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(882, 462);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -375,6 +385,7 @@
         private System.Windows.Forms.TextBox searchText;
         private System.Windows.Forms.Button searchDo;
         private System.Windows.Forms.ComboBox searchSelection;
+        private System.Windows.Forms.ComboBox searchTable;
     }
 }
 
