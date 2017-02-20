@@ -67,7 +67,8 @@ namespace libraryCard
                 cond_ = "";
 
 
-            string constring = "datasource=teh.ddns.net;port=3306;username=scrub;password=librarycard";
+            string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
+     //     string constring = "datasource=teh.ddns.net;port=3306;username=scrub;password=librarycard";
             string Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);

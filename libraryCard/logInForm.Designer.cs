@@ -68,7 +68,7 @@
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(166, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 48);
+            this.label1.Size = new System.Drawing.Size(347, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "Database Log-In";
             // 
@@ -156,6 +156,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "logInForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log-In";
             this.TopMost = true;
             this.ResumeLayout(false);

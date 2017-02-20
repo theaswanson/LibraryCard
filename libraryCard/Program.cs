@@ -121,6 +121,14 @@ namespace libraryCard
 
     }
 
+    public static class db_type
+    {
+        public static string db_hostname;
+        public static string db_port;
+        public static string db_username;
+        public static string db_pw;
+    }
+
     static class Program
     {
         /// <summary>
@@ -131,8 +139,8 @@ namespace libraryCard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1()); //start program
-            //Application.Run(new logInForm());  opens the login form
+            //Application.Run(new Form1()); // start program with the menu
+            Application.Run(new logInForm()); // start program the login form
         }
     }
 }
