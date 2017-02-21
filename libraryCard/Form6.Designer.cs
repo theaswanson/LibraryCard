@@ -39,7 +39,7 @@
             // 
             // lname
             // 
-            this.lname.Location = new System.Drawing.Point(226, 161);
+            this.lname.Location = new System.Drawing.Point(207, 150);
             this.lname.Margin = new System.Windows.Forms.Padding(4);
             this.lname.Name = "lname";
             this.lname.Size = new System.Drawing.Size(285, 29);
@@ -48,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 161);
+            this.label2.Location = new System.Drawing.Point(93, 150);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 25);
@@ -57,7 +57,7 @@
             // 
             // fname
             // 
-            this.fname.Location = new System.Drawing.Point(224, 83);
+            this.fname.Location = new System.Drawing.Point(205, 72);
             this.fname.Margin = new System.Windows.Forms.Padding(4);
             this.fname.Name = "fname";
             this.fname.Size = new System.Drawing.Size(287, 29);
@@ -66,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 83);
+            this.label1.Location = new System.Drawing.Point(74, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 25);
@@ -76,7 +76,7 @@
             // button3
             // 
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(328, 242);
+            this.button3.Location = new System.Drawing.Point(309, 231);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 40);
             this.button3.TabIndex = 23;
@@ -86,7 +86,7 @@
             // button4
             // 
             this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Location = new System.Drawing.Point(173, 242);
+            this.button4.Location = new System.Drawing.Point(154, 231);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 40);
             this.button4.TabIndex = 22;
@@ -99,7 +99,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button3;
-            this.ClientSize = new System.Drawing.Size(608, 344);
+            this.ClientSize = new System.Drawing.Size(568, 318);
             this.Controls.Add(this.lname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.fname);
