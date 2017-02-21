@@ -39,65 +39,70 @@
             // 
             // lname
             // 
-            this.lname.Location = new System.Drawing.Point(147, 98);
+            this.lname.Location = new System.Drawing.Point(202, 147);
+            this.lname.Margin = new System.Windows.Forms.Padding(4);
             this.lname.Name = "lname";
-            this.lname.Size = new System.Drawing.Size(208, 22);
+            this.lname.Size = new System.Drawing.Size(285, 29);
             this.lname.TabIndex = 25;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 98);
+            this.label2.Location = new System.Drawing.Point(88, 147);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.Size = new System.Drawing.Size(81, 25);
             this.label2.TabIndex = 27;
             this.label2.Text = "Book ID";
             // 
             // fname
             // 
-            this.fname.Location = new System.Drawing.Point(145, 46);
+            this.fname.Location = new System.Drawing.Point(200, 69);
+            this.fname.Margin = new System.Windows.Forms.Padding(4);
             this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(210, 22);
+            this.fname.Size = new System.Drawing.Size(287, 29);
             this.fname.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 46);
+            this.label1.Location = new System.Drawing.Point(69, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 26;
             this.label1.Text = "Customer ID";
             // 
             // button3
             // 
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(221, 152);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(304, 228);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 27);
+            this.button3.Size = new System.Drawing.Size(104, 40);
             this.button3.TabIndex = 23;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Location = new System.Drawing.Point(108, 152);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(149, 228);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 27);
+            this.button4.Size = new System.Drawing.Size(115, 40);
             this.button4.TabIndex = 22;
             this.button4.Text = "Submit";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form6
             // 
             this.AcceptButton = this.button4;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.button3;
-            this.ClientSize = new System.Drawing.Size(413, 212);
+            this.ClientSize = new System.Drawing.Size(568, 318);
             this.Controls.Add(this.lname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.fname);
@@ -105,12 +110,11 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checking Out";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

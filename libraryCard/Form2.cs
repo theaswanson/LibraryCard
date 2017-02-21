@@ -83,7 +83,6 @@ namespace libraryCard
                 "\nAuthor: " + this.author.Text +
                 "\nISBN: " + this.ISBN.Text +
                 "\nGenre: " + this.genre.Text +
-                "\nYear Published: " + this.year.Text +
                 "\nPage Count: " + this.pageCount.Text);
             //    while (myReader.Read())
             //    {

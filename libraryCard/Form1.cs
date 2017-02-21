@@ -301,6 +301,8 @@ namespace libraryCard
                 searchSelection.Items.Add("Author");
                 searchSelection.Items.Add("Genre");
                 searchSelection.Items.Add("ISBN");
+
+                this.searchSelection.SelectedIndex = 0; //selects first option by default
             }
             else if (this.searchTable.Text == "Customers") //if checkout table is selected
             {
@@ -312,6 +314,8 @@ namespace libraryCard
                 searchSelection.Items.Add("Phone");
                 searchSelection.Items.Add("Address");
                 searchSelection.Items.Add("Birthdate");
+
+                this.searchSelection.SelectedIndex = 2; //selects first option by default
             }
             else if (this.searchTable.Text == "Checkout") //if checkout table is selected
             {
@@ -323,9 +327,11 @@ namespace libraryCard
                 searchSelection.Items.Add("Check-out date");
                 searchSelection.Items.Add("Check-in date");
                 searchSelection.Items.Add("Book Status");
+
+                this.searchSelection.SelectedIndex = 0; //selects first option by default
             }
 
-            this.searchSelection.SelectedIndex = 0; //selects first option by default
+            
         }
 
         private void searchSelection_SelectedIndexChanged(object sender, EventArgs e)
