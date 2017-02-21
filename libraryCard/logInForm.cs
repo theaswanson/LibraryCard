@@ -65,5 +65,10 @@ namespace libraryCard
                 MessageBox.Show("Wrong port.");
 
         }
+
+        private void logInForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
