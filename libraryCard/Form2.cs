@@ -49,6 +49,8 @@ namespace libraryCard
                 "\nYear Published: " + this.year.Text +
                 "\nPage Count: " + this.pageCount.Text);*/
 
+
+            //checks to see condition of book from 4 bool options
             string cond_ = "";
 
             if (condNew.Checked == true)
@@ -66,7 +68,7 @@ namespace libraryCard
             else
                 cond_ = "";
 
-
+            //Establishes a connection to the database
             string constring = "datasource=teh.ddns.net;port=3306;username=scrub;password=librarycard";
             string Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
             MySqlConnection conDataBase = new MySqlConnection(constring);
