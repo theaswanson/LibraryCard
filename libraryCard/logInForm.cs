@@ -37,7 +37,7 @@ namespace libraryCard
                 string connect = "datasource=" + textBox1.Text + ";port=" + textBox2.Text + ";username=" + textBox3.Text + ";password=" + textBox4.Text;
                 MySqlConnection conDataBase = new MySqlConnection(connect);
 
-                try
+                    try
                 {
                     conDataBase.Open();
 
