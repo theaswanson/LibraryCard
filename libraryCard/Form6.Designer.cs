@@ -82,6 +82,7 @@
             this.button3.TabIndex = 23;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -92,12 +93,14 @@
             this.button4.TabIndex = 22;
             this.button4.Text = "Submit";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form6
             // 
             this.AcceptButton = this.button4;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.button3;
             this.ClientSize = new System.Drawing.Size(568, 318);
             this.Controls.Add(this.lname);
@@ -107,6 +110,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checking Out";

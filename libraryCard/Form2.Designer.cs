@@ -44,8 +44,6 @@
             this.condGood = new System.Windows.Forms.RadioButton();
             this.condNew = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.year = new System.Windows.Forms.TextBox();
             this.pageCount = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -82,7 +80,7 @@
             // 
             // author
             // 
-            this.author.Location = new System.Drawing.Point(143, 135);
+            this.author.Location = new System.Drawing.Point(143, 134);
             this.author.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.author.Name = "author";
             this.author.Size = new System.Drawing.Size(398, 29);
@@ -92,7 +90,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 205);
+            this.label3.Location = new System.Drawing.Point(40, 204);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 25);
@@ -101,7 +99,7 @@
             // 
             // ISBN
             // 
-            this.ISBN.Location = new System.Drawing.Point(143, 199);
+            this.ISBN.Location = new System.Drawing.Point(143, 200);
             this.ISBN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ISBN.Name = "ISBN";
             this.ISBN.Size = new System.Drawing.Size(398, 29);
@@ -110,7 +108,7 @@
             // 
             // getData
             // 
-            this.getData.Location = new System.Drawing.Point(161, 642);
+            this.getData.Location = new System.Drawing.Point(161, 571);
             this.getData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.getData.Name = "getData";
             this.getData.Size = new System.Drawing.Size(105, 41);
@@ -122,7 +120,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(306, 642);
+            this.button2.Location = new System.Drawing.Point(306, 571);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 41);
@@ -153,7 +151,7 @@
             // condPoor
             // 
             this.condPoor.AutoSize = true;
-            this.condPoor.Location = new System.Drawing.Point(189, 572);
+            this.condPoor.Location = new System.Drawing.Point(189, 504);
             this.condPoor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.condPoor.Name = "condPoor";
             this.condPoor.Size = new System.Drawing.Size(78, 29);
@@ -166,7 +164,7 @@
             // condFair
             // 
             this.condFair.AutoSize = true;
-            this.condFair.Location = new System.Drawing.Point(189, 535);
+            this.condFair.Location = new System.Drawing.Point(189, 467);
             this.condFair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.condFair.Name = "condFair";
             this.condFair.Size = new System.Drawing.Size(70, 29);
@@ -179,7 +177,7 @@
             // condGood
             // 
             this.condGood.AutoSize = true;
-            this.condGood.Location = new System.Drawing.Point(189, 502);
+            this.condGood.Location = new System.Drawing.Point(189, 434);
             this.condGood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.condGood.Name = "condGood";
             this.condGood.Size = new System.Drawing.Size(85, 29);
@@ -192,7 +190,7 @@
             // condNew
             // 
             this.condNew.AutoSize = true;
-            this.condNew.Location = new System.Drawing.Point(189, 467);
+            this.condNew.Location = new System.Drawing.Point(189, 399);
             this.condNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.condNew.Name = "condNew";
             this.condNew.Size = new System.Drawing.Size(76, 29);
@@ -205,35 +203,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 471);
+            this.label5.Location = new System.Drawing.Point(40, 403);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 25);
             this.label5.TabIndex = 14;
             this.label5.Text = "Condition";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 336);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 25);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Publication Year";
-            // 
-            // year
-            // 
-            this.year.Location = new System.Drawing.Point(216, 332);
-            this.year.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(325, 29);
-            this.year.TabIndex = 5;
-            this.year.TextChanged += new System.EventHandler(this.year_TextChanged_1);
-            // 
             // pageCount
             // 
-            this.pageCount.Location = new System.Drawing.Point(216, 399);
+            this.pageCount.Location = new System.Drawing.Point(216, 332);
             this.pageCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pageCount.Name = "pageCount";
             this.pageCount.Size = new System.Drawing.Size(325, 29);
@@ -243,7 +222,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(40, 402);
+            this.label7.Location = new System.Drawing.Point(40, 336);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 25);
@@ -257,11 +236,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(576, 716);
+            this.ClientSize = new System.Drawing.Size(576, 671);
             this.Controls.Add(this.pageCount);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.year);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.condNew);
             this.Controls.Add(this.condGood);
@@ -306,8 +283,6 @@
         private System.Windows.Forms.RadioButton condGood;
         private System.Windows.Forms.RadioButton condNew;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox year;
         private System.Windows.Forms.TextBox pageCount;
         private System.Windows.Forms.Label label7;
     }
