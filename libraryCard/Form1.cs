@@ -20,6 +20,8 @@ namespace libraryCard
         MySqlDataAdapter adapter;
         DataTable table;
 
+        
+
         string table_, field_;
 
         public Form1()
@@ -329,6 +331,11 @@ namespace libraryCard
         private void searchSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void checkInOutToolStripMenuItem_Click(object sender, EventArgs e)
