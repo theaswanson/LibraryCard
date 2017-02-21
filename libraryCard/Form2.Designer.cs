@@ -53,67 +53,67 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 25);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Book Title";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // bookTitle
             // 
-            this.bookTitle.Location = new System.Drawing.Point(143, 68);
-            this.bookTitle.Margin = new System.Windows.Forms.Padding(4);
+            this.bookTitle.Location = new System.Drawing.Point(78, 37);
+            this.bookTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bookTitle.Name = "bookTitle";
-            this.bookTitle.Size = new System.Drawing.Size(398, 29);
+            this.bookTitle.Size = new System.Drawing.Size(219, 20);
             this.bookTitle.TabIndex = 1;
             this.bookTitle.TextChanged += new System.EventHandler(this.bookTitle_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(14, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Author(s)";
             // 
             // author
             // 
-            this.author.Location = new System.Drawing.Point(143, 134);
-            this.author.Margin = new System.Windows.Forms.Padding(4);
+            this.author.Location = new System.Drawing.Point(78, 73);
+            this.author.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.author.Name = "author";
-            this.author.Size = new System.Drawing.Size(398, 29);
+            this.author.Size = new System.Drawing.Size(219, 20);
             this.author.TabIndex = 2;
             this.author.TextChanged += new System.EventHandler(this.author_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 204);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(22, 111);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 25);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "ISBN";
             // 
             // ISBN
             // 
-            this.ISBN.Location = new System.Drawing.Point(143, 200);
-            this.ISBN.Margin = new System.Windows.Forms.Padding(4);
+            this.ISBN.Location = new System.Drawing.Point(78, 108);
+            this.ISBN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ISBN.Name = "ISBN";
-            this.ISBN.Size = new System.Drawing.Size(398, 29);
+            this.ISBN.Size = new System.Drawing.Size(219, 20);
             this.ISBN.TabIndex = 3;
             this.ISBN.TextChanged += new System.EventHandler(this.ISBN_TextChanged);
             // 
             // getData
             // 
-            this.getData.Location = new System.Drawing.Point(161, 643);
-            this.getData.Margin = new System.Windows.Forms.Padding(4);
+            this.getData.Location = new System.Drawing.Point(88, 348);
+            this.getData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.getData.Name = "getData";
-            this.getData.Size = new System.Drawing.Size(105, 41);
+            this.getData.Size = new System.Drawing.Size(57, 22);
             this.getData.TabIndex = 11;
             this.getData.Text = "Add";
             this.getData.UseVisualStyleBackColor = true;
@@ -121,10 +121,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(306, 643);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.Location = new System.Drawing.Point(167, 348);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 41);
+            this.button2.Size = new System.Drawing.Size(57, 22);
             this.button2.TabIndex = 12;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
@@ -133,29 +134,29 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 270);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(22, 146);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 25);
+            this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Genre";
             // 
             // genre
             // 
-            this.genre.Location = new System.Drawing.Point(143, 266);
-            this.genre.Margin = new System.Windows.Forms.Padding(4);
+            this.genre.Location = new System.Drawing.Point(78, 144);
+            this.genre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.genre.Name = "genre";
-            this.genre.Size = new System.Drawing.Size(398, 29);
+            this.genre.Size = new System.Drawing.Size(219, 20);
             this.genre.TabIndex = 4;
             this.genre.TextChanged += new System.EventHandler(this.genre_TextChanged);
             // 
             // condPoor
             // 
             this.condPoor.AutoSize = true;
-            this.condPoor.Location = new System.Drawing.Point(188, 573);
-            this.condPoor.Margin = new System.Windows.Forms.Padding(4);
+            this.condPoor.Location = new System.Drawing.Point(103, 310);
+            this.condPoor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.condPoor.Name = "condPoor";
-            this.condPoor.Size = new System.Drawing.Size(78, 29);
+            this.condPoor.Size = new System.Drawing.Size(47, 17);
             this.condPoor.TabIndex = 10;
             this.condPoor.TabStop = true;
             this.condPoor.Text = "Poor";
@@ -165,10 +166,10 @@
             // condFair
             // 
             this.condFair.AutoSize = true;
-            this.condFair.Location = new System.Drawing.Point(188, 536);
-            this.condFair.Margin = new System.Windows.Forms.Padding(4);
+            this.condFair.Location = new System.Drawing.Point(103, 290);
+            this.condFair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.condFair.Name = "condFair";
-            this.condFair.Size = new System.Drawing.Size(70, 29);
+            this.condFair.Size = new System.Drawing.Size(42, 17);
             this.condFair.TabIndex = 9;
             this.condFair.TabStop = true;
             this.condFair.Text = "Fair";
@@ -178,10 +179,10 @@
             // condGood
             // 
             this.condGood.AutoSize = true;
-            this.condGood.Location = new System.Drawing.Point(188, 502);
-            this.condGood.Margin = new System.Windows.Forms.Padding(4);
+            this.condGood.Location = new System.Drawing.Point(103, 272);
+            this.condGood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.condGood.Name = "condGood";
-            this.condGood.Size = new System.Drawing.Size(85, 29);
+            this.condGood.Size = new System.Drawing.Size(51, 17);
             this.condGood.TabIndex = 8;
             this.condGood.TabStop = true;
             this.condGood.Text = "Good";
@@ -191,10 +192,10 @@
             // condNew
             // 
             this.condNew.AutoSize = true;
-            this.condNew.Location = new System.Drawing.Point(188, 467);
-            this.condNew.Margin = new System.Windows.Forms.Padding(4);
+            this.condNew.Location = new System.Drawing.Point(103, 253);
+            this.condNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.condNew.Name = "condNew";
-            this.condNew.Size = new System.Drawing.Size(76, 29);
+            this.condNew.Size = new System.Drawing.Size(47, 17);
             this.condNew.TabIndex = 7;
             this.condNew.TabStop = true;
             this.condNew.Text = "New";
@@ -204,57 +205,59 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 522);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(23, 283);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 25);
+            this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Condition";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 336);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(22, 182);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 25);
+            this.label6.Size = new System.Drawing.Size(84, 13);
             this.label6.TabIndex = 16;
             this.label6.Text = "Publication Year";
             // 
             // year
             // 
-            this.year.Location = new System.Drawing.Point(217, 332);
-            this.year.Margin = new System.Windows.Forms.Padding(4);
+            this.year.Location = new System.Drawing.Point(118, 180);
+            this.year.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(324, 29);
+            this.year.Size = new System.Drawing.Size(179, 20);
             this.year.TabIndex = 5;
             this.year.TextChanged += new System.EventHandler(this.year_TextChanged_1);
             // 
             // pageCount
             // 
-            this.pageCount.Location = new System.Drawing.Point(217, 398);
-            this.pageCount.Margin = new System.Windows.Forms.Padding(4);
+            this.pageCount.Location = new System.Drawing.Point(118, 216);
+            this.pageCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pageCount.Name = "pageCount";
-            this.pageCount.Size = new System.Drawing.Size(324, 29);
+            this.pageCount.Size = new System.Drawing.Size(179, 20);
             this.pageCount.TabIndex = 6;
             this.pageCount.TextChanged += new System.EventHandler(this.pageCount_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 402);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(22, 218);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 25);
+            this.label7.Size = new System.Drawing.Size(63, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "Page Count";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AcceptButton = this.getData;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(576, 716);
+            this.CancelButton = this.button2;
+            this.ClientSize = new System.Drawing.Size(314, 388);
             this.Controls.Add(this.pageCount);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.year);
@@ -275,7 +278,7 @@
             this.Controls.Add(this.bookTitle);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
