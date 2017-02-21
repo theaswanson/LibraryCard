@@ -13,7 +13,9 @@ namespace libraryCard
 {
     public partial class Form1 : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource = teh.ddns.net;port = 3306; Initial Catalog = 'librarycard'; username = scrub; password=librarycard");
+        static string connecting_str = "datasource = " + db_type.db_hostname + ";port = " + db_type.db_port + "; Initial Catalog = 'librarycard'; username = " + db_type.db_username + "; password = " + db_type.db_pw;
+        MySqlConnection connection = new MySqlConnection(connecting_str);
+        //MySqlConnection connection = new MySqlConnection("datasource = teh.ddns.net;port = 3306; Initial Catalog = 'librarycard'; username = scrub; password=librarycard");
         MySqlCommand command;
         MySqlDataAdapter adapter;
         DataTable table;
@@ -30,6 +32,11 @@ namespace libraryCard
             this.searchTable.SelectedIndex = 0; //selects first option by default
             this.searchSelection.SelectedIndex = 0; //selects first option by default
             searchData(); //search first table initially
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         public void searchData()
