@@ -85,7 +85,7 @@ namespace libraryCard
                 "\nGenre: " + this.genre.Text +
                 "\nPage Count: " + this.pageCount.Text);
             //    while (myReader.Read())
-            //    {
+            //    {                         pointless code
             //    }
             }
             catch (Exception ex) {
