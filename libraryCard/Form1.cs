@@ -120,11 +120,14 @@ namespace libraryCard
                     break;
 
                 //Checkout
-                case "Check-out date":
+                /*case "Check-out date":
                     field_ = "outDate";
                     break;
                 case "Check-in date":
                     field_ = "inDate";
+                    break;*/
+                case "Checkout ID":
+                    field_ = "checkoutID";
                     break;
                 case "Book Status":
                     field_ = "bookStatus";
@@ -134,45 +137,44 @@ namespace libraryCard
                     break;
             }
 
-            if (table_ == "customers")
+            if (table_ == "customers" && this.searchText.Text == "")
             {
-                if (this.searchText.Text == "") //if user is trying to bring up all customer information
-                {
-                    //"Enter something in search box"
-                }
-                else
-                {
-                    string[] badChars = {";", "'"};
-                    foreach (string x in badChars) //check for unallowed characters
-                    {
-                        if (this.searchText.Text.Contains(x))
-                        {
-                            this.searchText.Text = "";
-                        }
-                    }
-
-                    //string query = "SELECT * FROM " + this.searchTable.Text + " WHERE " + this.searchSelection.Text + " LIKE '%" + this.searchText.Text + "%'";
-                    string query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
-                    command = new MySqlCommand(query, connection);
-                    adapter = new MySqlDataAdapter(command);
-                    //Outputs Table
-                    table = new DataTable();
-                    adapter.Fill(table);
-                    dataGridView1.DataSource = table;
-                }
+                //don't search
             }
             else
             {
                 string[] badChars = { ";", "'" };
                 foreach (string x in badChars) //check for unallowed characters
                 {
-                    if (this.searchText.Text.Contains(x))
+                    if (this.searchText.Text.Contains(x)) //if search contains bad character
                     {
-                        this.searchText.Text = "";
+                        this.searchText.Text = ""; //set search text to blank
                     }
                 }
 
-                string query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                string query;
+
+                if (table_ == "checkout")
+                {
+                    if (field_ == "checkoutID")
+                    {
+                        query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                    }
+                    if (field_ == "LName")
+                    {
+                        query = "SELECT * FROM checkout,customers,books WHERE customers.customerID IN (SELECT customerID FROM customers WHERE LName = \"" + this.searchText.Text + "\" AND customerID = checkout.customerID AND books.bookID = checkout.bookID)";
+                    }
+                    else
+                    {
+                        query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                    }
+
+                }
+                else
+                {
+                    query = "SELECT * FROM " + table_ + " WHERE " + field_ + " LIKE '%" + this.searchText.Text + "%'";
+                }
+                
                 command = new MySqlCommand(query, connection);
                 adapter = new MySqlDataAdapter(command);
                 //Outputs Table
@@ -342,9 +344,10 @@ namespace libraryCard
 
                 searchSelection.Items.Add("Checkout ID");
                 searchSelection.Items.Add("Customer ID");
+                searchSelection.Items.Add("Last Name");
                 searchSelection.Items.Add("Book ID");
-                searchSelection.Items.Add("Check-out date");
-                searchSelection.Items.Add("Check-in date");
+                //searchSelection.Items.Add("Check-out date");
+                //searchSelection.Items.Add("Check-in date");
                 searchSelection.Items.Add("Book Status");
 
                 this.searchSelection.SelectedIndex = 0; //selects first option by default
