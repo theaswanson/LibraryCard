@@ -32,7 +32,7 @@ namespace libraryCard
         private void Form1_Load(object sender, EventArgs e)
         {
             this.searchTable.SelectedIndex = 0; //selects first option by default
-            this.searchSelection.SelectedIndex = 0; //selects first option by default
+            this.searchSelection.SelectedIndex = 1; //selects first option by default
             searchData(); //search first table initially
 
             
