@@ -34,6 +34,25 @@ namespace libraryCard
             this.searchTable.SelectedIndex = 0; //selects first option by default
             this.searchSelection.SelectedIndex = 0; //selects first option by default
             searchData(); //search first table initially
+
+            
+            DataGridViewColumn bookID = dataGridView1.Columns[0];
+            DataGridViewColumn ISBN = dataGridView1.Columns[1];
+            DataGridViewColumn Title = dataGridView1.Columns[2];
+            DataGridViewColumn Author = dataGridView1.Columns[3];
+            DataGridViewColumn genre = dataGridView1.Columns[4];
+            DataGridViewColumn pageCount = dataGridView1.Columns[5];
+            DataGridViewColumn condition = dataGridView1.Columns[6];
+
+            bookID.Width = 45;
+            ISBN.Width = 110;
+            Title.Width = 350;
+            Author.Width = 130;
+            genre.Width = 80;
+            pageCount.Width = 50;
+            condition.Width = 57;
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -275,7 +294,7 @@ namespace libraryCard
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
