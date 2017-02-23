@@ -26,7 +26,7 @@ namespace libraryCard
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string outDate = DateTime.Now.ToString("yyyyMMddHHmmss"); ;
+            string outDate = DateTime.Now.ToString("yyyyMMddHHmmss"); 
             string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
             string Query = "INSERT INTO librarycard.checkout (customerID,bookID,outDate) values('" + this.customerID.Text + "','" + this.bookID.Text + "','" + outDate + "') ;";
             MySqlConnection conDataBase = new MySqlConnection(constring);
