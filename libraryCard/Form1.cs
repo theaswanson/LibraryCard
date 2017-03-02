@@ -32,7 +32,7 @@ namespace libraryCard
         private void Form1_Load(object sender, EventArgs e)
         {
             this.searchTable.SelectedIndex = 0; //selects first option by default
-            this.searchSelection.SelectedIndex = 0; //selects first option by default
+            this.searchSelection.SelectedIndex = 1; //selects first option by default
             searchData(); //search first table initially
 
             
@@ -43,16 +43,16 @@ namespace libraryCard
             DataGridViewColumn genre = dataGridView1.Columns[4];
             DataGridViewColumn pageCount = dataGridView1.Columns[5];
             DataGridViewColumn condition = dataGridView1.Columns[6];
-
-            bookID.Width = 45;
+            /*
+            bookID.Width = 45;  
             ISBN.Width = 110;
             Title.Width = 350;
-            Author.Width = 130;
+            Author.Width = 130;         //Pointless shit
             genre.Width = 80;
             pageCount.Width = 50;
-            condition.Width = 57;
-
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            condition.Width = 57;   
+            */                      
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; //allows all columns to autosize
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
