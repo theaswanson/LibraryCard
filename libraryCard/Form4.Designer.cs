@@ -62,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(213, 448);
+            this.button2.Location = new System.Drawing.Point(213, 484);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(57, 22);
@@ -73,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(72, 448);
+            this.button1.Location = new System.Drawing.Point(151, 484);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(57, 22);
@@ -120,9 +120,9 @@
             "Phone",
             "Address",
             "Date of Birth"});
-            this.comboBox1.Location = new System.Drawing.Point(184, 113);
+            this.comboBox1.Location = new System.Drawing.Point(110, 49);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 32);
+            this.comboBox1.Size = new System.Drawing.Size(168, 21);
             this.comboBox1.TabIndex = 19;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -136,21 +136,21 @@
             this.fNameLabel.Text = "First Name";
             this.fNameLabel.Visible = false;
             // 
-            // editField
+            // fName
             // 
-            this.fName.Location = new System.Drawing.Point(167, 176);
+            this.fName.Location = new System.Drawing.Point(180, 92);
             this.fName.Margin = new System.Windows.Forms.Padding(4);
             this.fName.Name = "fName";
-            this.fName.Size = new System.Drawing.Size(202, 29);
+            this.fName.Size = new System.Drawing.Size(202, 20);
             this.fName.TabIndex = 21;
             this.fName.Visible = false;
             // 
             // lName
             // 
-            this.lName.Location = new System.Drawing.Point(167, 177);
+            this.lName.Location = new System.Drawing.Point(180, 120);
             this.lName.Margin = new System.Windows.Forms.Padding(4);
             this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(202, 29);
+            this.lName.Size = new System.Drawing.Size(202, 20);
             this.lName.TabIndex = 23;
             this.lName.Visible = false;
             // 
@@ -159,17 +159,17 @@
             this.lNameLabel.AutoSize = true;
             this.lNameLabel.Location = new System.Drawing.Point(41, 180);
             this.lNameLabel.Name = "lNameLabel";
-            this.lNameLabel.Size = new System.Drawing.Size(106, 25);
+            this.lNameLabel.Size = new System.Drawing.Size(58, 13);
             this.lNameLabel.TabIndex = 22;
             this.lNameLabel.Text = "Last Name";
             this.lNameLabel.Visible = false;
             // 
             // phoneNum
             // 
-            this.phoneNum.Location = new System.Drawing.Point(167, 177);
+            this.phoneNum.Location = new System.Drawing.Point(180, 148);
             this.phoneNum.Margin = new System.Windows.Forms.Padding(4);
             this.phoneNum.Name = "phoneNum";
-            this.phoneNum.Size = new System.Drawing.Size(202, 29);
+            this.phoneNum.Size = new System.Drawing.Size(202, 20);
             this.phoneNum.TabIndex = 24;
             // 
             // phoneNumLabel
@@ -178,17 +178,17 @@
             this.phoneNumLabel.Location = new System.Drawing.Point(53, 181);
             this.phoneNumLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phoneNumLabel.Name = "phoneNumLabel";
-            this.phoneNumLabel.Size = new System.Drawing.Size(85, 25);
+            this.phoneNumLabel.Size = new System.Drawing.Size(48, 13);
             this.phoneNumLabel.TabIndex = 25;
             this.phoneNumLabel.Text = "Phone #";
             // 
             // zipLab
             // 
             this.zipLab.AutoSize = true;
-            this.zipLab.Location = new System.Drawing.Point(208, 334);
+            this.zipLab.Location = new System.Drawing.Point(197, 347);
             this.zipLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.zipLab.Name = "zipLab";
-            this.zipLab.Size = new System.Drawing.Size(95, 25);
+            this.zipLab.Size = new System.Drawing.Size(52, 13);
             this.zipLab.TabIndex = 43;
             this.zipLab.Text = "ZIP Code";
             // 
@@ -197,16 +197,16 @@
             this.zip.Location = new System.Drawing.Point(200, 364);
             this.zip.Margin = new System.Windows.Forms.Padding(4);
             this.zip.Name = "zip";
-            this.zip.Size = new System.Drawing.Size(193, 29);
+            this.zip.Size = new System.Drawing.Size(193, 20);
             this.zip.TabIndex = 39;
             // 
             // stateLab
             // 
             this.stateLab.AutoSize = true;
-            this.stateLab.Location = new System.Drawing.Point(35, 331);
+            this.stateLab.Location = new System.Drawing.Point(34, 347);
             this.stateLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stateLab.Name = "stateLab";
-            this.stateLab.Size = new System.Drawing.Size(58, 25);
+            this.stateLab.Size = new System.Drawing.Size(32, 13);
             this.stateLab.TabIndex = 42;
             this.stateLab.Text = "State";
             // 
@@ -320,7 +320,7 @@
             this.state.Location = new System.Drawing.Point(35, 364);
             this.state.Margin = new System.Windows.Forms.Padding(4);
             this.state.Name = "state";
-            this.state.Size = new System.Drawing.Size(121, 32);
+            this.state.Size = new System.Drawing.Size(121, 21);
             this.state.TabIndex = 38;
             // 
             // cityLab
@@ -329,7 +329,7 @@
             this.cityLab.Location = new System.Drawing.Point(35, 255);
             this.cityLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cityLab.Name = "cityLab";
-            this.cityLab.Size = new System.Drawing.Size(46, 25);
+            this.cityLab.Size = new System.Drawing.Size(24, 13);
             this.cityLab.TabIndex = 41;
             this.cityLab.Text = "City";
             // 
@@ -338,7 +338,7 @@
             this.city.Location = new System.Drawing.Point(35, 288);
             this.city.Margin = new System.Windows.Forms.Padding(4);
             this.city.Name = "city";
-            this.city.Size = new System.Drawing.Size(358, 29);
+            this.city.Size = new System.Drawing.Size(358, 20);
             this.city.TabIndex = 37;
             // 
             // stAdLab
@@ -347,7 +347,7 @@
             this.stAdLab.Location = new System.Drawing.Point(35, 179);
             this.stAdLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stAdLab.Name = "stAdLab";
-            this.stAdLab.Size = new System.Drawing.Size(142, 25);
+            this.stAdLab.Size = new System.Drawing.Size(76, 13);
             this.stAdLab.TabIndex = 40;
             this.stAdLab.Text = "Street Address";
             // 
@@ -356,7 +356,7 @@
             this.stAd.Location = new System.Drawing.Point(35, 211);
             this.stAd.Margin = new System.Windows.Forms.Padding(4);
             this.stAd.Name = "stAd";
-            this.stAd.Size = new System.Drawing.Size(358, 29);
+            this.stAd.Size = new System.Drawing.Size(358, 20);
             this.stAd.TabIndex = 36;
             // 
             // slash1Lab
@@ -365,7 +365,7 @@
             this.slash1Lab.Location = new System.Drawing.Point(115, 250);
             this.slash1Lab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.slash1Lab.Name = "slash1Lab";
-            this.slash1Lab.Size = new System.Drawing.Size(18, 25);
+            this.slash1Lab.Size = new System.Drawing.Size(12, 13);
             this.slash1Lab.TabIndex = 55;
             this.slash1Lab.Text = "/";
             // 
@@ -375,7 +375,7 @@
             this.slash2Lab.Location = new System.Drawing.Point(210, 250);
             this.slash2Lab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.slash2Lab.Name = "slash2Lab";
-            this.slash2Lab.Size = new System.Drawing.Size(18, 25);
+            this.slash2Lab.Size = new System.Drawing.Size(12, 13);
             this.slash2Lab.TabIndex = 54;
             this.slash2Lab.Text = "/";
             // 
@@ -384,7 +384,7 @@
             this.year.Location = new System.Drawing.Point(234, 250);
             this.year.Margin = new System.Windows.Forms.Padding(4);
             this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(66, 29);
+            this.year.Size = new System.Drawing.Size(66, 20);
             this.year.TabIndex = 49;
             // 
             // day
@@ -392,7 +392,7 @@
             this.day.Location = new System.Drawing.Point(139, 250);
             this.day.Margin = new System.Windows.Forms.Padding(4);
             this.day.Name = "day";
-            this.day.Size = new System.Drawing.Size(66, 29);
+            this.day.Size = new System.Drawing.Size(66, 20);
             this.day.TabIndex = 48;
             // 
             // yLab
@@ -401,7 +401,7 @@
             this.yLab.Location = new System.Drawing.Point(228, 221);
             this.yLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.yLab.Name = "yLab";
-            this.yLab.Size = new System.Drawing.Size(38, 25);
+            this.yLab.Size = new System.Drawing.Size(21, 13);
             this.yLab.TabIndex = 53;
             this.yLab.Text = "YY";
             // 
@@ -411,7 +411,7 @@
             this.mLab.Location = new System.Drawing.Point(38, 221);
             this.mLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mLab.Name = "mLab";
-            this.mLab.Size = new System.Drawing.Size(46, 25);
+            this.mLab.Size = new System.Drawing.Size(25, 13);
             this.mLab.TabIndex = 52;
             this.mLab.Text = "MM";
             // 
@@ -421,7 +421,7 @@
             this.dLab.Location = new System.Drawing.Point(133, 221);
             this.dLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dLab.Name = "dLab";
-            this.dLab.Size = new System.Drawing.Size(40, 25);
+            this.dLab.Size = new System.Drawing.Size(23, 13);
             this.dLab.TabIndex = 51;
             this.dLab.Text = "DD";
             // 
@@ -430,7 +430,7 @@
             this.month.Location = new System.Drawing.Point(41, 250);
             this.month.Margin = new System.Windows.Forms.Padding(4);
             this.month.Name = "month";
-            this.month.Size = new System.Drawing.Size(66, 29);
+            this.month.Size = new System.Drawing.Size(66, 20);
             this.month.TabIndex = 47;
             // 
             // dateBirthLab
@@ -439,7 +439,7 @@
             this.dateBirthLab.Location = new System.Drawing.Point(41, 182);
             this.dateBirthLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateBirthLab.Name = "dateBirthLab";
-            this.dateBirthLab.Size = new System.Drawing.Size(118, 25);
+            this.dateBirthLab.Size = new System.Drawing.Size(66, 13);
             this.dateBirthLab.TabIndex = 50;
             this.dateBirthLab.Text = "Date of Birth";
             // 
