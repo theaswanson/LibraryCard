@@ -54,7 +54,7 @@ namespace libraryCard
             if (comboBox1.SelectedIndex == 0)
             {
                 fNameLabel.Show();
-                editField.Show();
+                fName.Show();
             }
 
             else if (comboBox1.SelectedIndex == 1)
@@ -98,7 +98,7 @@ namespace libraryCard
         private void Form4_Load(object sender, EventArgs e)
         {
             fNameLabel.Hide();
-            editField.Hide();
+            fName.Hide();
            
         }
 
@@ -127,13 +127,11 @@ namespace libraryCard
             }
 
             string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
-            string Query = "USE librarycard UPDATE customers SET " + field_ + "=\"" + this.editField.Text + "\" WHERE customerID=" + this.id.Text + ";";
+            string Query = "USE librarycard; UPDATE customers SET " + field_ + "=\"" + this.fName.Text + "\" WHERE customerID=" + this.id.Text + ";";
             //              UPDATE customers SET     FName     ='     text                   '  WHERE customerID=    1;
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
             MySqlDataReader myReader;
-
-            MessageBox.Show("After query");
 
             try
             {
