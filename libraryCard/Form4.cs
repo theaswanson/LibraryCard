@@ -21,5 +21,21 @@ namespace libraryCard
         {
             this.Close();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                fNameLabel.Show();
+                fName.Show();
+            }
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            fNameLabel.Hide();
+            fName.Hide();
+           
+        }
     }
 }
