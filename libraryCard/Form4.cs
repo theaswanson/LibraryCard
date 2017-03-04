@@ -27,99 +27,25 @@ namespace libraryCard
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fNameLabel.Hide();
-            fName.Hide();
-            lNameLabel.Hide();
-            lName.Hide();
-            phoneNumLabel.Hide();
-            phoneNum.Hide();
-            stAdLab.Hide();
-            stAd.Hide();
-            cityLab.Hide();
-            city.Hide();
-            stateLab.Hide();
-            state.Hide();
-            zipLab.Hide();
-            zip.Hide();
-            dateBirthLab.Hide();
-            mLab.Hide();
-            month.Hide();
-            dLab.Hide();
-            day.Hide();
-            yLab.Hide();
-            year.Hide();
-            slash1Lab.Hide();
-            slash2Lab.Hide();
+            foreach (Control lbl in Controls.OfType<GroupBox>())
+                lbl.Hide();
 
             if (comboBox1.SelectedIndex == 0)
-            {
-                fNameLabel.Show();
-                fName.Show();
-            }
-
+                fNameBox.Show();
             else if (comboBox1.SelectedIndex == 1)
-            {
-                lNameLabel.Show();
-                lName.Show();
-            }
-
+                lNameBox.Show();
             else if (comboBox1.SelectedIndex == 2)
-            {
-                phoneNumLabel.Show();
-                phoneNum.Show();
-            }
-
+                phoneBox.Show();
             else if (comboBox1.SelectedIndex == 3)
-            {
-                stAdLab.Show();
-                stAd.Show();
-                cityLab.Show();
-                city.Show();
-                stateLab.Show();
-                state.Show();
-                zipLab.Show();
-                zip.Show();
-            }
-
+                addressBox.Show();
             else if (comboBox1.SelectedIndex == 4)
-            {
-                dateBirthLab.Show();
-                mLab.Show();
-                month.Show();
-                dLab.Show();
-                day.Show();
-                yLab.Show();
-                year.Show();
-                slash1Lab.Show();
-                slash2Lab.Show();
-            }
+                DateOfBirthBox.Show();
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            fNameLabel.Hide();
-            fName.Hide();
-            lNameLabel.Hide();
-            lName.Hide();
-            phoneNumLabel.Hide();
-            phoneNum.Hide();
-            stAdLab.Hide();
-            stAd.Hide();
-            cityLab.Hide();
-            city.Hide();
-            stateLab.Hide();
-            state.Hide();
-            zipLab.Hide();
-            zip.Hide();
-            dateBirthLab.Hide();
-            mLab.Hide();
-            month.Hide();
-            dLab.Hide();
-            day.Hide();
-            yLab.Hide();
-            year.Hide();
-            slash1Lab.Hide();
-            slash2Lab.Hide();
+            foreach (Control lbl in Controls.OfType<GroupBox>())
+                lbl.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
