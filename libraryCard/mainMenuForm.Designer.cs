@@ -66,7 +66,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Location = new System.Drawing.Point(719, 455);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 50);
             this.button1.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Location = new System.Drawing.Point(719, 376);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 50);
             this.button2.TabIndex = 1;
@@ -112,14 +112,14 @@
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
@@ -136,14 +136,14 @@
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(204, 34);
             this.checkOutToolStripMenuItem.Text = "Check-Out";
             this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(204, 34);
             this.checkInToolStripMenuItem.Text = "Check-In";
             this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
@@ -183,7 +183,7 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ItemSize = new System.Drawing.Size(61, 29);
             this.tabControl1.Location = new System.Drawing.Point(0, 38);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1639, 1007);
@@ -203,9 +203,9 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1631, 970);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Menu";
@@ -215,7 +215,7 @@
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.Location = new System.Drawing.Point(695, 712);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(249, 70);
             this.button4.TabIndex = 9;
@@ -227,7 +227,7 @@
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.Location = new System.Drawing.Point(695, 613);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(249, 70);
             this.button5.TabIndex = 7;
@@ -239,7 +239,7 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Location = new System.Drawing.Point(719, 534);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 50);
             this.button3.TabIndex = 5;
@@ -257,10 +257,10 @@
             this.tabPage2.Controls.Add(this.searchText);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1631, 964);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1631, 970);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Search";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             "Customers",
             "Checkout"});
             this.searchTable.Location = new System.Drawing.Point(13, 7);
-            this.searchTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchTable.Margin = new System.Windows.Forms.Padding(4);
             this.searchTable.Name = "searchTable";
             this.searchTable.Size = new System.Drawing.Size(180, 32);
             this.searchTable.TabIndex = 1;
@@ -284,7 +284,7 @@
             // searchDo
             // 
             this.searchDo.Location = new System.Drawing.Point(799, 7);
-            this.searchDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchDo.Margin = new System.Windows.Forms.Padding(4);
             this.searchDo.Name = "searchDo";
             this.searchDo.Size = new System.Drawing.Size(134, 41);
             this.searchDo.TabIndex = 4;
@@ -298,7 +298,7 @@
             this.searchSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchSelection.FormattingEnabled = true;
             this.searchSelection.Location = new System.Drawing.Point(204, 7);
-            this.searchSelection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchSelection.Margin = new System.Windows.Forms.Padding(4);
             this.searchSelection.Name = "searchSelection";
             this.searchSelection.Size = new System.Drawing.Size(219, 32);
             this.searchSelection.TabIndex = 2;
@@ -307,7 +307,7 @@
             // searchText
             // 
             this.searchText.Location = new System.Drawing.Point(433, 9);
-            this.searchText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchText.Margin = new System.Windows.Forms.Padding(4);
             this.searchText.Name = "searchText";
             this.searchText.Size = new System.Drawing.Size(356, 29);
             this.searchText.TabIndex = 3;
@@ -319,8 +319,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 288);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 294);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.MinimumSize = new System.Drawing.Size(733, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -347,7 +347,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(792, 732);
             this.Name = "mainMenuForm";
             this.Text = "Library Card";

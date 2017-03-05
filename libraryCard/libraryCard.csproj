@@ -109,9 +109,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>mainMenuForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="bookAddForm.resx">
       <DependentUpon>bookAddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="logInForm.resx">
       <DependentUpon>logInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainMenuForm.resx">
+      <DependentUpon>mainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
