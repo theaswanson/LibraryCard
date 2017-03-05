@@ -12,9 +12,9 @@ using MySql.Data.MySqlClient;
 
 namespace libraryCard
 {
-    public partial class Form2 : Form
+    public partial class bookAddForm : Form
     {
-        public Form2()
+        public bookAddForm()
         {
             InitializeComponent();
         }

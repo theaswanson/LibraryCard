@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace libraryCard
 {
-    public partial class Form3 : Form
+    public partial class customerAddForm : Form
     {
-        public Form3()
+        public customerAddForm()
         {
             InitializeComponent();
         }

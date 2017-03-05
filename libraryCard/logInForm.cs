@@ -78,7 +78,7 @@ namespace libraryCard
                     string write = textBox1.Text + "\r\n" + textBox2.Text + "\r\n" + textBox3.Text + Environment.NewLine;
                     File.WriteAllText("db_log.txt", write);
 
-                    Form1 menu = new Form1();
+                    mainMenuForm menu = new mainMenuForm();
                     menu.Show();
                     this.Hide();
                 }

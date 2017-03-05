@@ -11,11 +11,11 @@ using MySql.Data.MySqlClient;
 
 namespace libraryCard
 {
-    public partial class Form4 : Form
+    public partial class customerEditForm : Form
     {
         string field_, edit_;
 
-        public Form4()
+        public customerEditForm()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace libraryCard
 {
-    public partial class Form5 : Form
+    public partial class checkInForm : Form
     {
-        public Form5()
+        public checkInForm()
         {
             InitializeComponent();
         }
