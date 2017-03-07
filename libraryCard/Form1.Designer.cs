@@ -268,13 +268,14 @@
             // searchTable
             // 
             this.searchTable.AllowDrop = true;
+            this.searchTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.searchTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchTable.FormattingEnabled = true;
             this.searchTable.Items.AddRange(new object[] {
             "Books",
             "Customers",
             "Checkout"});
-            this.searchTable.Location = new System.Drawing.Point(9, 5);
+            this.searchTable.Location = new System.Drawing.Point(232, 3);
             this.searchTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTable.Name = "searchTable";
             this.searchTable.Size = new System.Drawing.Size(132, 24);
@@ -283,10 +284,13 @@
             // 
             // searchDo
             // 
-            this.searchDo.Location = new System.Drawing.Point(581, 5);
+            this.searchDo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchDo.AutoSize = true;
+            this.searchDo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.searchDo.Location = new System.Drawing.Point(804, 3);
             this.searchDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchDo.Name = "searchDo";
-            this.searchDo.Size = new System.Drawing.Size(97, 27);
+            this.searchDo.Size = new System.Drawing.Size(63, 27);
             this.searchDo.TabIndex = 4;
             this.searchDo.Text = "Search";
             this.searchDo.UseVisualStyleBackColor = true;
@@ -295,9 +299,10 @@
             // searchSelection
             // 
             this.searchSelection.AllowDrop = true;
+            this.searchSelection.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.searchSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchSelection.FormattingEnabled = true;
-            this.searchSelection.Location = new System.Drawing.Point(148, 5);
+            this.searchSelection.Location = new System.Drawing.Point(371, 3);
             this.searchSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchSelection.Name = "searchSelection";
             this.searchSelection.Size = new System.Drawing.Size(160, 24);
@@ -306,7 +311,8 @@
             // 
             // searchText
             // 
-            this.searchText.Location = new System.Drawing.Point(315, 6);
+            this.searchText.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchText.Location = new System.Drawing.Point(538, 4);
             this.searchText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchText.Name = "searchText";
             this.searchText.Size = new System.Drawing.Size(260, 22);
@@ -315,16 +321,19 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 184);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 49);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.dataGridView1.MinimumSize = new System.Drawing.Size(533, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1178, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(1178, 583);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
