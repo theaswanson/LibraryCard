@@ -1,6 +1,6 @@
 ﻿namespace libraryCard
 {
-    partial class Form2
+    partial class bookAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bookAddForm));
             this.label1 = new System.Windows.Forms.Label();
             this.bookTitle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
