@@ -37,6 +37,10 @@ namespace libraryCard
 
         public mainMenuForm()
         {
+            
+            
+
+
             InitializeComponent();
         }
 
@@ -45,8 +49,9 @@ namespace libraryCard
             this.searchTable.SelectedIndex = 0; //selects first option by default
             this.searchSelection.SelectedIndex = 1; //selects first option by default
             searchData(); //search first table initially
-
             
+
+
             DataGridViewColumn bookID = dataGridView1.Columns[0];
             DataGridViewColumn ISBN = dataGridView1.Columns[1];
             DataGridViewColumn Title = dataGridView1.Columns[2];
@@ -64,6 +69,11 @@ namespace libraryCard
             condition.Width = 57;   
             */                      
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; //allows all columns to autosize
+           
+
+
+
+
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
