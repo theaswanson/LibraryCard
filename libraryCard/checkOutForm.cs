@@ -36,7 +36,7 @@ namespace libraryCard
             {
                 conDataBase.Open();
                 myReader = cmdDataBase.ExecuteReader();
-                MessageBox.Show("Book checked out");
+                MessageBox.Show("Book checked out.");
               
             }
             catch (Exception ex)
