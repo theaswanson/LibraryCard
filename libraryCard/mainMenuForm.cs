@@ -387,6 +387,16 @@ namespace libraryCard
 
         }
 
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            //Function for going to Form 4, which is used to remove a customer
+            bookEditForm editBook = new bookEditForm();
+            if (Application.OpenForms[editBook.Name] == null)
+                editBook.Show();
+            else
+                Application.OpenForms[editBook.Name].Focus();
+        }
+
         private void checkInOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bookEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookEditForm.Designer.cs">
+      <DependentUpon>bookEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customerAddForm.resx">
       <DependentUpon>customerAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookEditForm.resx">
+      <DependentUpon>bookEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="customerEditForm.resx">
       <DependentUpon>customerEditForm.cs</DependentUpon>
