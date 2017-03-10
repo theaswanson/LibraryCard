@@ -133,5 +133,10 @@ namespace libraryCard
         {
 
         }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

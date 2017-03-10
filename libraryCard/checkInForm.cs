@@ -14,8 +14,6 @@ namespace libraryCard
 {
     public partial class checkInForm : Form
     {
-
-
         public checkInForm()
         {
             InitializeComponent();
@@ -35,7 +33,7 @@ namespace libraryCard
         {
 
         }
-
+        
         private void button1_Click_1(object sender, EventArgs e)
         {
             string inDate = DateTime.Now.ToString("yyyyMMddHHmmss");
@@ -77,7 +75,6 @@ namespace libraryCard
             }
             */
         }
-
+        
     }
 }
-       

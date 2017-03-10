@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pageCount = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.helpButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +63,7 @@
             // bookTitle
             // 
             this.bookTitle.Location = new System.Drawing.Point(143, 68);
-            this.bookTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bookTitle.Margin = new System.Windows.Forms.Padding(4);
             this.bookTitle.Name = "bookTitle";
             this.bookTitle.Size = new System.Drawing.Size(398, 29);
             this.bookTitle.TabIndex = 1;
@@ -81,7 +82,7 @@
             // author
             // 
             this.author.Location = new System.Drawing.Point(143, 134);
-            this.author.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.author.Margin = new System.Windows.Forms.Padding(4);
             this.author.Name = "author";
             this.author.Size = new System.Drawing.Size(398, 29);
             this.author.TabIndex = 2;
@@ -100,7 +101,7 @@
             // ISBN
             // 
             this.ISBN.Location = new System.Drawing.Point(143, 200);
-            this.ISBN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ISBN.Margin = new System.Windows.Forms.Padding(4);
             this.ISBN.Name = "ISBN";
             this.ISBN.Size = new System.Drawing.Size(398, 29);
             this.ISBN.TabIndex = 3;
@@ -109,7 +110,7 @@
             // getData
             // 
             this.getData.Location = new System.Drawing.Point(161, 571);
-            this.getData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.getData.Margin = new System.Windows.Forms.Padding(4);
             this.getData.Name = "getData";
             this.getData.Size = new System.Drawing.Size(105, 41);
             this.getData.TabIndex = 11;
@@ -121,7 +122,7 @@
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(306, 571);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 41);
             this.button2.TabIndex = 12;
@@ -142,7 +143,7 @@
             // genre
             // 
             this.genre.Location = new System.Drawing.Point(143, 266);
-            this.genre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genre.Margin = new System.Windows.Forms.Padding(4);
             this.genre.Name = "genre";
             this.genre.Size = new System.Drawing.Size(398, 29);
             this.genre.TabIndex = 4;
@@ -152,7 +153,7 @@
             // 
             this.condPoor.AutoSize = true;
             this.condPoor.Location = new System.Drawing.Point(189, 504);
-            this.condPoor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.condPoor.Margin = new System.Windows.Forms.Padding(4);
             this.condPoor.Name = "condPoor";
             this.condPoor.Size = new System.Drawing.Size(78, 29);
             this.condPoor.TabIndex = 10;
@@ -165,7 +166,7 @@
             // 
             this.condFair.AutoSize = true;
             this.condFair.Location = new System.Drawing.Point(189, 467);
-            this.condFair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.condFair.Margin = new System.Windows.Forms.Padding(4);
             this.condFair.Name = "condFair";
             this.condFair.Size = new System.Drawing.Size(70, 29);
             this.condFair.TabIndex = 9;
@@ -178,7 +179,7 @@
             // 
             this.condGood.AutoSize = true;
             this.condGood.Location = new System.Drawing.Point(189, 434);
-            this.condGood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.condGood.Margin = new System.Windows.Forms.Padding(4);
             this.condGood.Name = "condGood";
             this.condGood.Size = new System.Drawing.Size(85, 29);
             this.condGood.TabIndex = 8;
@@ -191,7 +192,7 @@
             // 
             this.condNew.AutoSize = true;
             this.condNew.Location = new System.Drawing.Point(189, 399);
-            this.condNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.condNew.Margin = new System.Windows.Forms.Padding(4);
             this.condNew.Name = "condNew";
             this.condNew.Size = new System.Drawing.Size(76, 29);
             this.condNew.TabIndex = 7;
@@ -213,7 +214,7 @@
             // pageCount
             // 
             this.pageCount.Location = new System.Drawing.Point(216, 332);
-            this.pageCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageCount.Margin = new System.Windows.Forms.Padding(4);
             this.pageCount.Name = "pageCount";
             this.pageCount.Size = new System.Drawing.Size(325, 29);
             this.pageCount.TabIndex = 6;
@@ -229,7 +230,18 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Page Count";
             // 
-            // Form2
+            // helpButton
+            // 
+            this.helpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpButton.Location = new System.Drawing.Point(99, 200);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(29, 29);
+            this.helpButton.TabIndex = 19;
+            this.helpButton.Text = "?";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            // 
+            // bookAddForm
             // 
             this.AcceptButton = this.getData;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -237,6 +249,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(576, 671);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.pageCount);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -255,9 +268,9 @@
             this.Controls.Add(this.bookTitle);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "Form2";
+            this.Name = "bookAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Book Adding";
             this.TopMost = true;
@@ -285,5 +298,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox pageCount;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button helpButton;
     }
 }
