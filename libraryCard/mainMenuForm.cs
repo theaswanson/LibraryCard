@@ -397,6 +397,45 @@ namespace libraryCard
                 Application.OpenForms[editBook.Name].Focus();
         }
 
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("http://teh.ddns.net/help.php");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to visit webpage.");
+            }
+        }
+
+        private void editBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bookEditForm editBook = new bookEditForm();
+            if (Application.OpenForms[editBook.Name] == null)
+                editBook.Show();
+            else
+                Application.OpenForms[editBook.Name].Focus();
+        }
+
+        private void editCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            customerEditForm editCustomer = new customerEditForm();
+            if (Application.OpenForms[editCustomer.Name] == null)
+                editCustomer.Show();
+            else
+                Application.OpenForms[editCustomer.Name].Focus();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            about aboutThing = new about();
+            if (Application.OpenForms[aboutThing.Name] == null)
+                aboutThing.Show();
+            else
+                Application.OpenForms[aboutThing.Name].Focus();
+        }
+
         private void checkInOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

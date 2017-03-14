@@ -99,6 +99,12 @@
     <Compile Include="bookEditForm.Designer.cs">
       <DependentUpon>bookEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bookAddForm.resx">
       <DependentUpon>bookAddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +184,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="librarycardkey.pfx" />
     <None Include="libraryCard_TemporaryKey.pfx" />
@@ -205,7 +215,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="book yeet.jpg" />
     <Content Include="book.ico" />
+    <None Include="Resources\bookImage.jpg" />
+    <None Include="Resources\book yeet.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
