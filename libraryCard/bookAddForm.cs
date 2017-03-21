@@ -141,7 +141,12 @@ namespace libraryCard
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
+            
+        }
 
+        private void bookAddForm_Load(object sender, EventArgs e)
+        {
+            toolTip1.AutoPopDelay = 20000;
         }
     }
 }
