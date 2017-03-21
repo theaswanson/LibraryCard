@@ -46,7 +46,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pageCount = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.helpButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 204);
+            this.label3.Location = new System.Drawing.Point(40, 203);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 25);
@@ -230,16 +231,14 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Page Count";
             // 
-            // helpButton
+            // label6
             // 
-            this.helpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpButton.Location = new System.Drawing.Point(99, 200);
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(29, 29);
-            this.helpButton.TabIndex = 19;
-            this.helpButton.Text = "?";
-            this.helpButton.UseVisualStyleBackColor = true;
-            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(97, 204);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 25);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "?";
             // 
             // bookAddForm
             // 
@@ -249,7 +248,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(576, 671);
-            this.Controls.Add(this.helpButton);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pageCount);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -298,6 +297,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox pageCount;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
