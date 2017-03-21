@@ -60,7 +60,7 @@
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(142, 358);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(57, 22);
             this.button2.TabIndex = 12;
@@ -71,7 +71,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(59, 358);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(57, 22);
             this.button1.TabIndex = 11;
@@ -82,7 +82,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 279);
+            this.label4.Location = new System.Drawing.Point(26, 279);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
@@ -93,7 +93,7 @@
             // phoneNum
             // 
             this.phoneNum.Location = new System.Drawing.Point(28, 124);
-            this.phoneNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phoneNum.Margin = new System.Windows.Forms.Padding(2);
             this.phoneNum.Name = "phoneNum";
             this.phoneNum.Size = new System.Drawing.Size(194, 20);
             this.phoneNum.TabIndex = 3;
@@ -110,8 +110,8 @@
             // 
             // lname
             // 
-            this.lname.Location = new System.Drawing.Point(29, 82);
-            this.lname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lname.Location = new System.Drawing.Point(28, 82);
+            this.lname.Margin = new System.Windows.Forms.Padding(2);
             this.lname.Name = "lname";
             this.lname.Size = new System.Drawing.Size(194, 20);
             this.lname.TabIndex = 2;
@@ -129,7 +129,7 @@
             // fname
             // 
             this.fname.Location = new System.Drawing.Point(28, 40);
-            this.fname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fname.Margin = new System.Windows.Forms.Padding(2);
             this.fname.Name = "fname";
             this.fname.Size = new System.Drawing.Size(194, 20);
             this.fname.TabIndex = 1;
@@ -147,7 +147,7 @@
             // stAddress
             // 
             this.stAddress.Location = new System.Drawing.Point(28, 165);
-            this.stAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stAddress.Margin = new System.Windows.Forms.Padding(2);
             this.stAddress.Name = "stAddress";
             this.stAddress.Size = new System.Drawing.Size(197, 20);
             this.stAddress.TabIndex = 4;
@@ -175,7 +175,7 @@
             // city
             // 
             this.city.Location = new System.Drawing.Point(28, 207);
-            this.city.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.city.Margin = new System.Windows.Forms.Padding(2);
             this.city.Name = "city";
             this.city.Size = new System.Drawing.Size(197, 20);
             this.city.TabIndex = 5;
@@ -306,7 +306,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(122, 232);
+            this.label9.Location = new System.Drawing.Point(118, 232);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 13);
@@ -316,15 +316,15 @@
             // zip
             // 
             this.zip.Location = new System.Drawing.Point(118, 248);
-            this.zip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.zip.Margin = new System.Windows.Forms.Padding(2);
             this.zip.Name = "zip";
             this.zip.Size = new System.Drawing.Size(107, 20);
             this.zip.TabIndex = 7;
             // 
             // month
             // 
-            this.month.Location = new System.Drawing.Point(28, 316);
-            this.month.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.month.Location = new System.Drawing.Point(26, 316);
+            this.month.Margin = new System.Windows.Forms.Padding(2);
             this.month.Name = "month";
             this.month.Size = new System.Drawing.Size(38, 20);
             this.month.TabIndex = 8;
@@ -332,7 +332,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(78, 300);
+            this.label5.Location = new System.Drawing.Point(81, 300);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
@@ -352,7 +352,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(130, 300);
+            this.label11.Location = new System.Drawing.Point(133, 300);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(21, 13);
@@ -362,7 +362,7 @@
             // day
             // 
             this.day.Location = new System.Drawing.Point(81, 316);
-            this.day.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.day.Margin = new System.Windows.Forms.Padding(2);
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(38, 20);
             this.day.TabIndex = 9;
@@ -370,7 +370,7 @@
             // year
             // 
             this.year.Location = new System.Drawing.Point(133, 316);
-            this.year.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.year.Margin = new System.Windows.Forms.Padding(2);
             this.year.Name = "year";
             this.year.Size = new System.Drawing.Size(38, 20);
             this.year.TabIndex = 10;
@@ -378,7 +378,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(120, 316);
+            this.label12.Location = new System.Drawing.Point(120, 320);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(12, 13);
@@ -388,14 +388,14 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(68, 316);
+            this.label13.Location = new System.Drawing.Point(68, 320);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(12, 13);
             this.label13.TabIndex = 46;
             this.label13.Text = "/";
             // 
-            // Form3
+            // customerAddForm
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,9 +429,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Form3";
+            this.Name = "customerAddForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Customer";

@@ -401,7 +401,7 @@ namespace libraryCard
         {
             try
             {
-                System.Diagnostics.Process.Start("http://teh.ddns.net/help.php");
+                System.Diagnostics.Process.Start("http://teh.ddns.net/LibraryCard/manual.pdf");
             }
             catch (Exception ex)
             {
