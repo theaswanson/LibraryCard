@@ -69,51 +69,51 @@ namespace libraryCard
                 "\nYear Published: " + this.year.Text +
                 "\nPage Count: " + this.pageCount.Text);*/
 
+            string Query = "";
+
             if (comboBookVsDvd.SelectedIndex == 0) //adding a book
             {
-                string Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
-                MySqlConnection conDataBase = new MySqlConnection(constring);
-                MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
-                MySqlDataReader myReader;
-                try
-                {
-                    conDataBase.Open();
-                    myReader = cmdDataBase.ExecuteReader();
-                    MessageBox.Show("Book Saved: \n" + "Title: " + this.bookTitle.Text +
-                    "\nAuthor: " + this.author.Text +
-                    "\nISBN: " + this.ISBN.Text +
-                    "\nGenre: " + this.genre.Text +
-                    "\nPage Count: " + this.pageCount.Text);
-                    //    while (myReader.Read())
-                    //    {                         pointless code
-                    //    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
             }
+
             else if (comboBookVsDvd.SelectedIndex == 1) //adding a dvd
             {
-                string Query = "INSERT INTO librarycard.dvd (title,genre,year,dvdCondition) values('" + this.dvdTitle.Text + "','" + this.dvdGenre.Text + "','" + this.dvdYear.Text + "','" + cond_ + "') ;";
-                MySqlConnection conDataBase = new MySqlConnection(constring);
-                MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
-                MySqlDataReader myReader;
-                try
+                Query = "INSERT INTO librarycard.dvd (title,genre,year,dvdCondition) values('" + this.dvdTitle.Text + "','" + this.dvdGenre.Text + "','" + this.dvdYear.Text + "','" + cond_ + "') ;";
+            }
+
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
+            MySqlDataReader myReader;
+            try
+            {
+                conDataBase.Open();
+                myReader = cmdDataBase.ExecuteReader();
+
+                if (comboBookVsDvd.SelectedIndex == 0)
                 {
-                    conDataBase.Open();
-                    myReader = cmdDataBase.ExecuteReader();
-                    MessageBox.Show("DVD Saved: \n" + "Title: " + this.dvdTitle.Text +
-                    "\nGenre: " + this.dvdGenre.Text +
-                    "\nYear: " + this.dvdYear.Text);
+                    MessageBox.Show("Book Saved: \n" + "Title: " + this.bookTitle.Text +
+                "\nAuthor: " + this.author.Text +
+                "\nISBN: " + this.ISBN.Text +
+                "\nGenre: " + this.genre.Text +
+                "\nPage Count: " + this.pageCount.Text);
                     //    while (myReader.Read())
                     //    {                         pointless code
                     //    }
                 }
-                catch (Exception ex)
+
+                else if (comboBookVsDvd.SelectedIndex == 1)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("DVD Saved: \n" + "Title: " + this.dvdTitle.Text +
+                "\nGenre: " + this.dvdGenre.Text +
+                "\nYear: " + this.dvdYear.Text);
+                    //    while (myReader.Read())
+                    //    {                         pointless code
+                    //    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
