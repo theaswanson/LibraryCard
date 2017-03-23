@@ -35,52 +35,54 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.comboBoxID_ISBN = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bookID
             // 
-            this.bookID.Location = new System.Drawing.Point(110, 80);
-            this.bookID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bookID.Location = new System.Drawing.Point(202, 214);
+            this.bookID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bookID.Name = "bookID";
-            this.bookID.Size = new System.Drawing.Size(157, 20);
-            this.bookID.TabIndex = 25;
+            this.bookID.Size = new System.Drawing.Size(285, 29);
+            this.bookID.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(88, 214);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(81, 25);
             this.label2.TabIndex = 27;
             this.label2.Text = "Book ID";
             // 
             // customerID
             // 
-            this.customerID.Location = new System.Drawing.Point(109, 37);
-            this.customerID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customerID.Location = new System.Drawing.Point(200, 135);
+            this.customerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customerID.Name = "customerID";
-            this.customerID.Size = new System.Drawing.Size(158, 20);
-            this.customerID.TabIndex = 24;
+            this.customerID.Size = new System.Drawing.Size(286, 29);
+            this.customerID.TabIndex = 3;
             this.customerID.TextChanged += new System.EventHandler(this.fname_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(48, 135);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 26;
             this.label1.Text = "Customer ID";
             // 
             // button3
             // 
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(166, 124);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(304, 296);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 22);
+            this.button3.Size = new System.Drawing.Size(105, 41);
             this.button3.TabIndex = 23;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
@@ -89,23 +91,49 @@
             // button4
             // 
             this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Location = new System.Drawing.Point(81, 124);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(149, 296);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 22);
+            this.button4.Size = new System.Drawing.Size(116, 41);
             this.button4.TabIndex = 22;
             this.button4.Text = "Submit";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Form6
+            // comboBoxID_ISBN
+            // 
+            this.comboBoxID_ISBN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxID_ISBN.FormattingEnabled = true;
+            this.comboBoxID_ISBN.Items.AddRange(new object[] {
+            "Book using ISBN",
+            "Book using ID",
+            "DVD using ID"});
+            this.comboBoxID_ISBN.Location = new System.Drawing.Point(203, 53);
+            this.comboBoxID_ISBN.Name = "comboBoxID_ISBN";
+            this.comboBoxID_ISBN.Size = new System.Drawing.Size(284, 32);
+            this.comboBoxID_ISBN.TabIndex = 1;
+            this.comboBoxID_ISBN.SelectedIndexChanged += new System.EventHandler(this.comboBoxID_ISBN_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(63, 56);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 25);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Check Out";
+            // 
+            // checkOutForm
             // 
             this.AcceptButton = this.button4;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.button3;
-            this.ClientSize = new System.Drawing.Size(310, 172);
+            this.ClientSize = new System.Drawing.Size(568, 373);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBoxID_ISBN);
             this.Controls.Add(this.bookID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.customerID);
@@ -113,9 +141,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.Name = "Form6";
+            this.Name = "checkOutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checking Out";
             this.TopMost = true;
@@ -133,5 +161,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBoxID_ISBN;
+        private System.Windows.Forms.Label label3;
     }
 }

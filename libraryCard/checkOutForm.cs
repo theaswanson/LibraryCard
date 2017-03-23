@@ -26,33 +26,49 @@ namespace libraryCard
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string outDate = DateTime.Now.ToString("yyyyMMddHHmmss"); 
-            string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
-            string Query = "INSERT INTO librarycard.checkout (customerID,bookID,outDate) values('" + this.customerID.Text + "','" + this.bookID.Text + "','" + outDate + "') ;";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
-            MySqlDataReader myReader;
-            try
+            if (comboBoxID_ISBN.Text == "Book using ID")
             {
-                conDataBase.Open();
-                myReader = cmdDataBase.ExecuteReader();
-                MessageBox.Show("Book checked out.");
-              
+                string outDate = DateTime.Now.ToString("yyyyMMddHHmmss");
+                string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
+                string Query = "INSERT INTO librarycard.checkout (customerID,bookID,outDate) values('" + this.customerID.Text + "','" + this.bookID.Text + "','" + outDate + "') ;";
+                MySqlConnection conDataBase = new MySqlConnection(constring);
+                MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
+                MySqlDataReader myReader;
+                try
+                {
+                    conDataBase.Open();
+                    myReader = cmdDataBase.ExecuteReader();
+                    MessageBox.Show("Book checked out.");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else if (comboBoxID_ISBN.Text == "Book using ISBN")
             {
-                MessageBox.Show(ex.Message);
+
+            }
+            else if (comboBoxID_ISBN.Text == "DVD using ID")
+            {
+
             }
         }
 
         private void Form6_Load(object sender, EventArgs e)
         {
-
+            this.comboBoxID_ISBN.SelectedIndex = 1;
         }
 
         private void fname_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxID_ISBN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
