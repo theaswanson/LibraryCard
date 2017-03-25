@@ -44,18 +44,14 @@ namespace libraryCard
             //checks to see condition of book from 4 bool options
             string cond_ = "";
 
-            if (condNew.Checked == true)
+            if (condNew.Checked)
                 cond_ = "New";
-
-            else if (condGood.Checked == true)
+            else if (condGood.Checked)
                 cond_ = "Good";
-
-            else if (condFair.Checked == true)
+            else if (condFair.Checked)
                 cond_ = "Fair";
-
-            else if (condPoor.Checked == true)
+            else if (condPoor.Checked)
                 cond_ = "Poor";
-
             else
                 cond_ = "";
 

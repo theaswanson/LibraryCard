@@ -71,9 +71,6 @@ namespace libraryCard
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; //allows all columns to autosize
            
 
-
-
-
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

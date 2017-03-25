@@ -36,13 +36,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settingsForm));
             this.settingsTree = new System.Windows.Forms.TreeView();
             this.defaultsPanel = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxID_ISBN_sett = new System.Windows.Forms.ComboBox();
-            this.comboBookVsDvd_sett = new System.Windows.Forms.ComboBox();
-            this.applyButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.applyButton = new System.Windows.Forms.Button();
+            this.comboBookVsDvd_sett = new System.Windows.Forms.ComboBox();
+            this.comboBoxID_ISBN_sett = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.defaultsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,34 +74,44 @@
             this.defaultsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.defaultsPanel.Location = new System.Drawing.Point(266, 0);
             this.defaultsPanel.Name = "defaultsPanel";
-            this.defaultsPanel.Size = new System.Drawing.Size(871, 649);
+            this.defaultsPanel.Size = new System.Drawing.Size(785, 649);
             this.defaultsPanel.TabIndex = 2;
             // 
-            // splitter1
+            // cancelButton
             // 
-            this.splitter1.Location = new System.Drawing.Point(266, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 649);
-            this.splitter1.TabIndex = 3;
-            this.splitter1.TabStop = false;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelButton.Location = new System.Drawing.Point(442, 522);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(105, 41);
+            this.cancelButton.TabIndex = 24;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // label1
+            // applyButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Default choice in \"Add\" window:";
+            this.applyButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.applyButton.Location = new System.Drawing.Point(289, 522);
+            this.applyButton.Margin = new System.Windows.Forms.Padding(4);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(116, 41);
+            this.applyButton.TabIndex = 23;
+            this.applyButton.Text = "Apply";
+            this.applyButton.UseVisualStyleBackColor = true;
+            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
-            // label2
+            // comboBookVsDvd_sett
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(346, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Default choice in \"Check-Out\" window:";
+            this.comboBookVsDvd_sett.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBookVsDvd_sett.FormattingEnabled = true;
+            this.comboBookVsDvd_sett.Items.AddRange(new object[] {
+            "Book",
+            "DVD"});
+            this.comboBookVsDvd_sett.Location = new System.Drawing.Point(427, 46);
+            this.comboBookVsDvd_sett.Name = "comboBookVsDvd_sett";
+            this.comboBookVsDvd_sett.Size = new System.Drawing.Size(135, 32);
+            this.comboBookVsDvd_sett.TabIndex = 4;
             // 
             // comboBoxID_ISBN_sett
             // 
@@ -116,41 +126,31 @@
             this.comboBoxID_ISBN_sett.Size = new System.Drawing.Size(284, 32);
             this.comboBoxID_ISBN_sett.TabIndex = 5;
             // 
-            // comboBookVsDvd_sett
+            // label2
             // 
-            this.comboBookVsDvd_sett.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBookVsDvd_sett.FormattingEnabled = true;
-            this.comboBookVsDvd_sett.Items.AddRange(new object[] {
-            "Book",
-            "DVD"});
-            this.comboBookVsDvd_sett.Location = new System.Drawing.Point(427, 46);
-            this.comboBookVsDvd_sett.Name = "comboBookVsDvd_sett";
-            this.comboBookVsDvd_sett.Size = new System.Drawing.Size(135, 32);
-            this.comboBookVsDvd_sett.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(346, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Default choice in \"Check-Out\" window:";
             // 
-            // applyButton
+            // label1
             // 
-            this.applyButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.applyButton.Location = new System.Drawing.Point(289, 522);
-            this.applyButton.Margin = new System.Windows.Forms.Padding(4);
-            this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(116, 41);
-            this.applyButton.TabIndex = 23;
-            this.applyButton.Text = "Apply";
-            this.applyButton.UseVisualStyleBackColor = true;
-            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Default choice in \"Add\" window:";
             // 
-            // cancelButton
+            // splitter1
             // 
-            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(442, 522);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(105, 41);
-            this.cancelButton.TabIndex = 24;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.splitter1.Location = new System.Drawing.Point(266, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 649);
+            this.splitter1.TabIndex = 3;
+            this.splitter1.TabStop = false;
             // 
             // settingsForm
             // 
@@ -159,7 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(1137, 649);
+            this.ClientSize = new System.Drawing.Size(1051, 649);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.defaultsPanel);
             this.Controls.Add(this.settingsTree);
