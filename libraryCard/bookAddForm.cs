@@ -172,7 +172,7 @@ namespace libraryCard
             foreach (Control gPanels in Controls.OfType<Panel>())
                 gPanels.Hide();
 
-            this.comboBookVsDvd.SelectedIndex = 0;
+            this.comboBookVsDvd.SelectedIndex = Properties.Settings.Default.addChoice;
 
             toolTip1.AutoPopDelay = 20000;
         }

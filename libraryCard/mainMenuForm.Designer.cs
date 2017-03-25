@@ -45,6 +45,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.searchDo = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,11 +57,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.searchTable = new System.Windows.Forms.ComboBox();
-            this.searchDo = new System.Windows.Forms.Button();
             this.searchSelection = new System.Windows.Forms.ComboBox();
             this.searchText = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -85,7 +86,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addBookToolStripMenuItem,
-            this.addCustomerToolStripMenuItem});
+            this.addCustomerToolStripMenuItem,
+            this.settingsToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(56, 34);
             this.fileToolStripMenuItem.Text = "File";
@@ -94,14 +96,14 @@
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
@@ -189,6 +191,23 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 13;
             this.tabControl1.Tag = "";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(80, 4);
+            // 
+            // searchDo
+            // 
+            this.searchDo.Location = new System.Drawing.Point(799, 7);
+            this.searchDo.Margin = new System.Windows.Forms.Padding(4);
+            this.searchDo.Name = "searchDo";
+            this.searchDo.Size = new System.Drawing.Size(134, 41);
+            this.searchDo.TabIndex = 4;
+            this.searchDo.Text = "Search";
+            this.searchDo.UseVisualStyleBackColor = true;
+            this.searchDo.Click += new System.EventHandler(this.button6_Click);
             // 
             // tabPage1
             // 
@@ -332,17 +351,6 @@
             this.searchTable.TabIndex = 1;
             this.searchTable.SelectedIndexChanged += new System.EventHandler(this.searchTable_SelectedIndexChanged);
             // 
-            // searchDo
-            // 
-            this.searchDo.Location = new System.Drawing.Point(799, 7);
-            this.searchDo.Margin = new System.Windows.Forms.Padding(4);
-            this.searchDo.Name = "searchDo";
-            this.searchDo.Size = new System.Drawing.Size(134, 41);
-            this.searchDo.TabIndex = 4;
-            this.searchDo.Text = "Search";
-            this.searchDo.UseVisualStyleBackColor = true;
-            this.searchDo.Click += new System.EventHandler(this.button6_Click);
-            // 
             // searchSelection
             // 
             this.searchSelection.AllowDrop = true;
@@ -381,11 +389,12 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // contextMenuStrip1
+            // settingsToolStripMenuItem
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(80, 4);
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // mainMenuForm
             // 
@@ -451,6 +460,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 

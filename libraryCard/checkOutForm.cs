@@ -61,7 +61,7 @@ namespace libraryCard
             foreach (Control gBoxes in Controls.OfType<GroupBox>())
                 gBoxes.Hide();
 
-            this.comboBoxID_ISBN.SelectedIndex = 1;
+            this.comboBoxID_ISBN.SelectedIndex = Properties.Settings.Default.checkOutChoice;
         }
 
         private void fname_TextChanged(object sender, EventArgs e)

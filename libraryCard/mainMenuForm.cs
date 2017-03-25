@@ -78,6 +78,7 @@ namespace libraryCard
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Properties.Settings.Default.Save();
             Application.Exit();
         }
 
@@ -434,6 +435,15 @@ namespace libraryCard
                 aboutThing.Show();
             else
                 Application.OpenForms[aboutThing.Name].Focus();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            settingsForm settings = new settingsForm();
+            if (Application.OpenForms[settings.Name] == null)
+                settings.Show();
+            else
+                Application.OpenForms[settings.Name].Focus();
         }
 
         private void checkInOutToolStripMenuItem_Click(object sender, EventArgs e)

@@ -33,5 +33,29 @@ namespace libraryCard.Properties {
                 return ((string)(this["libraryCardDataConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int addChoice {
+            get {
+                return ((int)(this["addChoice"]));
+            }
+            set {
+                this["addChoice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int checkOutChoice {
+            get {
+                return ((int)(this["checkOutChoice"]));
+            }
+            set {
+                this["checkOutChoice"] = value;
+            }
+        }
     }
 }
