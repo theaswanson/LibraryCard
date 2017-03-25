@@ -259,9 +259,9 @@
             this.Controls.Add(this.comboBoxID_ISBN);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.bookIsbnBox);
             this.Controls.Add(this.bookIdBox);
             this.Controls.Add(this.dvdIdBox);
-            this.Controls.Add(this.bookIsbnBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

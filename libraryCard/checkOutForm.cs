@@ -26,33 +26,45 @@ namespace libraryCard
 
         private void button4_Click(object sender, EventArgs e)
         {
+            string outDate = DateTime.Now.ToString("yyyyMMddHHmmss");
+            string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
+
+            string Query = "";
+
             if (comboBoxID_ISBN.SelectedIndex == 0) //Book using ISBN
             {
 
             }
             else if (comboBoxID_ISBN.SelectedIndex == 1) //Book using ID
             {
-                string outDate = DateTime.Now.ToString("yyyyMMddHHmmss");
-                string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
-                string Query = "INSERT INTO librarycard.checkout (customerID,bookID,outDate) values('" + this.customerID.Text + "','" + this.bookID.Text + "','" + outDate + "') ;";
-                MySqlConnection conDataBase = new MySqlConnection(constring);
-                MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
-                MySqlDataReader myReader;
-                try
-                {
-                    conDataBase.Open();
-                    myReader = cmdDataBase.ExecuteReader();
-                    MessageBox.Show("Book checked out.");
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                Query = "INSERT INTO librarycard.checkout (customerID,bookID,outDate) values('" + this.customerID.Text + "','" + this.bookID.Text + "','" + outDate + "') ;";
             }
             else if (comboBoxID_ISBN.SelectedIndex == 2) //DVD using ID
             {
 
+            }
+
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
+            MySqlDataReader myReader;
+
+            try
+            {
+                conDataBase.Open();
+                myReader = cmdDataBase.ExecuteReader();
+                if (comboBoxID_ISBN.SelectedIndex == 2) //DVD using ID
+                {
+                    MessageBox.Show("DVD checked out.");
+                }
+                else
+                {
+                    MessageBox.Show("Book checked out.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
