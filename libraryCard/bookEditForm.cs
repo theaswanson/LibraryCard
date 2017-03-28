@@ -40,7 +40,7 @@ namespace libraryCard
                 genreBox.Show();
             else if (comboBox1.SelectedIndex == 4)
                 pageBox.Show();
-            else if (comboBox1.SelectedIndex == 4)
+            else if (comboBox1.SelectedIndex == 5)
                 conditionBox.Show();
         }
 
@@ -89,7 +89,16 @@ namespace libraryCard
                         break;
                     case "Condition":
                         field_ = "bookCondition";
-                        edit_ = condition.Text;
+                        if (condNew.Checked)
+                            edit_ = "New";
+                        else if (condGood.Checked)
+                            edit_ = "Good";
+                        else if (condFair.Checked)
+                            edit_ = "Fair";
+                        else if (condPoor.Checked)
+                            edit_ = "Poor";
+                        else
+                            edit_ = "";
                         break;
                     case "":
                         field_ = "errorInFieldSwitch";

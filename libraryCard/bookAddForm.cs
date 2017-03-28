@@ -41,6 +41,22 @@ namespace libraryCard
 
         private void getData_Click(object sender, EventArgs e)
         {
+            //checks to see condition of book from 4 bool options
+            string cond_ = "";
+
+            if (condNew.Checked)
+                cond_ = "New";
+            else if (condGood.Checked)
+                cond_ = "Good";
+            else if (condFair.Checked)
+                cond_ = "Fair";
+            else if (condPoor.Checked)
+                cond_ = "Poor";
+            else
+                cond_ = "";
+
+            string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
+
             //Console.WriteLine(bookTitle);0
             /*MessageBox.Show("Title: " + this.bookTitle.Text +
                 "\nAuthor: " + this.author.Text +
@@ -49,29 +65,18 @@ namespace libraryCard
                 "\nYear Published: " + this.year.Text +
                 "\nPage Count: " + this.pageCount.Text);*/
 
+            string Query = "";
 
-            //checks to see condition of book from 4 bool options
-            string cond_ = "";
+            if (comboBookVsDvd.SelectedIndex == 0) //adding a book
+            {
+                Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
+            }
 
-            if (condNew.Checked == true)
-                cond_ = "New";
+            else if (comboBookVsDvd.SelectedIndex == 1) //adding a dvd
+            {
+                Query = "INSERT INTO librarycard.dvd (title,genre,year,dvdCondition) values('" + this.dvdTitle.Text + "','" + this.dvdGenre.Text + "','" + this.dvdYear.Text + "','" + cond_ + "') ;";
+            }
 
-            else if (condGood.Checked == true)
-                cond_ = "Good";
-
-            else if (condFair.Checked == true)
-                cond_ = "Fair";
-
-            else if (condPoor.Checked == true)
-                cond_ = "Poor";
-
-            else
-                cond_ = "";
-
-
-            string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
-     
-            string Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
             MySqlDataReader myReader;
@@ -79,19 +84,33 @@ namespace libraryCard
             {
                 conDataBase.Open();
                 myReader = cmdDataBase.ExecuteReader();
-                MessageBox.Show("Book Saved: \n" + "Title: " + this.bookTitle.Text +
+
+                if (comboBookVsDvd.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Book Saved: \n" + "Title: " + this.bookTitle.Text +
                 "\nAuthor: " + this.author.Text +
                 "\nISBN: " + this.ISBN.Text +
                 "\nGenre: " + this.genre.Text +
                 "\nPage Count: " + this.pageCount.Text);
-            //    while (myReader.Read())
-            //    {                         pointless code
-            //    }
+                    //    while (myReader.Read())
+                    //    {                         pointless code
+                    //    }
+                }
+
+                else if (comboBookVsDvd.SelectedIndex == 1)
+                {
+                    MessageBox.Show("DVD Saved: \n" + "Title: " + this.dvdTitle.Text +
+                "\nGenre: " + this.dvdGenre.Text +
+                "\nYear: " + this.dvdYear.Text);
+                    //    while (myReader.Read())
+                    //    {                         pointless code
+                    //    }
+                }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
-                
         }
 
         private void condFair_CheckedChanged(object sender, EventArgs e)
@@ -146,6 +165,11 @@ namespace libraryCard
 
         private void bookAddForm_Load(object sender, EventArgs e)
         {
+            foreach (Control gPanels in Controls.OfType<Panel>())
+                gPanels.Hide();
+
+            this.comboBookVsDvd.SelectedIndex = Properties.Settings.Default.addChoice;
+
             toolTip1.AutoPopDelay = 20000;
         }
 
@@ -172,6 +196,17 @@ namespace libraryCard
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBookVsDvd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Control gPanels in Controls.OfType<Panel>())
+                gPanels.Hide();
+
+            if (comboBookVsDvd.SelectedIndex == 0)
+                addBookPanel.Show();
+            else if (comboBookVsDvd.SelectedIndex == 1)
+                addDvdPanel.Show();
         }
     }
 }
