@@ -42,7 +42,7 @@ namespace libraryCard
             try
             {
                 linkLabel1.LinkVisited = true;
-                System.Diagnostics.Process.Start("http://teh.ddns.net/LibraryCard/");
+                System.Diagnostics.Process.Start("https://layerseven.net/LibraryCard/");
             }
             catch (Exception ex)
             {
