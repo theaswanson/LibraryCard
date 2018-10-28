@@ -19,70 +19,42 @@ namespace libraryCard
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void condGood_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void condPoor_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void getData_Click(object sender, EventArgs e)
         {
-            //checks to see condition of book from 4 bool options
-            string cond_ = "";
+            // Get item condition from the currently selected radio button
+            string condition = "";
 
-            if (condNew.Checked)
-                cond_ = "New";
-            else if (condGood.Checked)
-                cond_ = "Good";
-            else if (condFair.Checked)
-                cond_ = "Fair";
-            else if (condPoor.Checked)
-                cond_ = "Poor";
+            if (conditionNewRadioButton.Checked)
+                condition = "New";
+            else if (conditionGoodRadioButton.Checked)
+                condition = "Good";
+            else if (conditionFairRadioButton.Checked)
+                condition = "Fair";
+            else if (conditionPoorRadioButton.Checked)
+                condition = "Poor";
             else
-                cond_ = "";
+                condition = "";
 
-            string constring = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
-
-            //Console.WriteLine(bookTitle);0
-            /*MessageBox.Show("Title: " + this.bookTitle.Text +
-                "\nAuthor: " + this.author.Text +
-                "\nISBN: " + this.ISBN.Text +
-                "\nGenre: " + this.genre.Text +
-                "\nYear Published: " + this.year.Text +
-                "\nPage Count: " + this.pageCount.Text);*/
-
-            string Query = "";
+            string connectionString = "datasource=" + db_type.db_hostname + ";port=" + db_type.db_port + ";username=" + db_type.db_username + ";password=" + db_type.db_pw;
+            string query = "";
 
             if (comboBookVsDvd.SelectedIndex == 0) //adding a book
-            {
-                Query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + cond_ + "') ;";
-            }
-
+                query = "INSERT INTO librarycard.books (title,author,ISBN,genre,pageCount,bookCondition) values('" + this.bookTitle.Text + "','" + this.author.Text + "','" + this.ISBN.Text + "','" + this.genre.Text + "','" + this.pageCount.Text + "','" + condition + "') ;";
             else if (comboBookVsDvd.SelectedIndex == 1) //adding a dvd
-            {
-                Query = "INSERT INTO librarycard.dvd (title,genre,year,dvdCondition) values('" + this.dvdTitle.Text + "','" + this.dvdGenre.Text + "','" + this.dvdYear.Text + "','" + cond_ + "') ;";
-            }
-
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
+                query = "INSERT INTO librarycard.dvd (title,genre,year,dvdCondition) values('" + this.dvdTitle.Text + "','" + this.dvdGenre.Text + "','" + this.dvdYear.Text + "','" + condition + "') ;";
+            
+            MySqlConnection connectionDatabase = new MySqlConnection(connectionString);
+            MySqlCommand cmdDataBase = new MySqlCommand(query, connectionDatabase);
             MySqlDataReader myReader;
+
             try
             {
-                conDataBase.Open();
+                connectionDatabase.Open();
                 myReader = cmdDataBase.ExecuteReader();
 
                 if (comboBookVsDvd.SelectedIndex == 0)
@@ -92,75 +64,23 @@ namespace libraryCard
                 "\nISBN: " + this.ISBN.Text +
                 "\nGenre: " + this.genre.Text +
                 "\nPage Count: " + this.pageCount.Text);
-                    //    while (myReader.Read())
-                    //    {                         pointless code
-                    //    }
                 }
-
                 else if (comboBookVsDvd.SelectedIndex == 1)
                 {
                     MessageBox.Show("DVD Saved: \n" + "Title: " + this.dvdTitle.Text +
                 "\nGenre: " + this.dvdGenre.Text +
                 "\nYear: " + this.dvdYear.Text);
-                    //    while (myReader.Read())
-                    //    {                         pointless code
-                    //    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error adding item: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void condFair_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void bookTitle_TextChanged(object sender, EventArgs e)
         {
             string title = bookTitle.Text;
-        }
-
-        private void year_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void condNew_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void author_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ISBN_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void genre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pageCount_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void helpButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-            
         }
 
         private void bookAddForm_Load(object sender, EventArgs e)
@@ -172,32 +92,7 @@ namespace libraryCard
 
             toolTip1.AutoPopDelay = 20000;
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void comboBookVsDvd_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (Control gPanels in Controls.OfType<Panel>())
