@@ -101,7 +101,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(172, 13);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://teh.ddns.net/LibraryCard/";
+            this.linkLabel1.Text = "https://layerseven.net/LibraryCard/";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
