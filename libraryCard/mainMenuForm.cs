@@ -26,7 +26,6 @@ namespace libraryCard
 
         static string connecting_str = "datasource = " + db_type.db_hostname + ";port = " + db_type.db_port + "; Initial Catalog = 'librarycard'; username = " + db_type.db_username + "; password = " + db_type.db_pw;
         MySqlConnection connection = new MySqlConnection(connecting_str);
-        //MySqlConnection connection = new MySqlConnection("datasource = teh.ddns.net;port = 3306; Initial Catalog = 'librarycard'; username = scrub; password=librarycard");
         MySqlCommand command;
         MySqlDataAdapter adapter;
         DataTable table;
@@ -399,7 +398,7 @@ namespace libraryCard
         {
             try
             {
-                System.Diagnostics.Process.Start("http://teh.ddns.net/LibraryCard/manual.pdf");
+                System.Diagnostics.Process.Start("https://layersevevn.net/LibraryCard/manual.pdf");
             }
             catch (Exception ex)
             {
