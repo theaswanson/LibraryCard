@@ -398,7 +398,7 @@ namespace libraryCard
         {
             try
             {
-                System.Diagnostics.Process.Start("https://layersevevn.net/LibraryCard/manual.pdf");
+                System.Diagnostics.Process.Start("https://layerseven.net/LibraryCard/manual.pdf");
             }
             catch (Exception ex)
             {
